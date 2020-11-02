@@ -28,8 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EasyLevel));
+            this.gameLoopTimer = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
+            // 
+            // gameLoopTimer
+            // 
+            this.gameLoopTimer.Enabled = true;
+            this.gameLoopTimer.Interval = 14;
+            this.gameLoopTimer.Tick += new System.EventHandler(this.gameLoopTimer_Tick);
             // 
             // EasyLevel
             // 
@@ -38,10 +46,14 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.Name = "EasyLevel";
             this.Size = new System.Drawing.Size(700, 400);
+            this.Load += new System.EventHandler(this.EasyLevel_Load);
+            this.Paint += new System.Windows.Forms.PaintEventHandler(this.EasyLevel_Paint);
             this.ResumeLayout(false);
 
         }
 
         #endregion
+
+        private System.Windows.Forms.Timer gameLoopTimer;
     }
 }

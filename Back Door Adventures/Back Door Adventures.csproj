@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Car.cs" />
     <Compile Include="ControlsScreen.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -198,9 +199,7 @@
     <None Include="Resources\Chan Back.png" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="EasyLevel.xml" />
-    <None Include="bin\Debug\XMLFile1.xml" />
-    <Content Include="XMLFile1.xml" />
+    <Content Include="bin\Debug\EasyLevel.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

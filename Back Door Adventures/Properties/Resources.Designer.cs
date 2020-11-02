@@ -191,44 +191,6 @@ namespace Back_Door_Adventures.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to &lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; ?&gt;
-        ///&lt;level&gt;
-        ///	&lt;Car&gt;
-        ///		&lt;colour&gt;blue&lt;/colour&gt;
-        ///		&lt;direction&gt;down&lt;/direction&gt;
-        ///		&lt;x&gt;104&lt;/x&gt;
-        ///		&lt;y&gt;12&lt;/y&gt;
-        ///	&lt;/Car&gt;
-        ///	&lt;Car&gt;
-        ///		&lt;colour&gt;red&lt;/colour&gt;
-        ///		&lt;direction&gt;down&lt;/direction&gt;
-        ///		&lt;x&gt;104&lt;/x&gt;
-        ///		&lt;y&gt;121&lt;/y&gt;
-        ///	&lt;/Car&gt;
-        ///	&lt;Car&gt;
-        ///		&lt;colour&gt;blue&lt;/colour&gt;
-        ///		&lt;direction&gt;down&lt;/direction&gt;
-        ///		&lt;x&gt;104&lt;/x&gt;
-        ///		&lt;y&gt;343&lt;/y&gt;
-        ///	&lt;/Car&gt;
-        ///	&lt;Car&gt;
-        ///		&lt;colour&gt;blue&lt;/colour&gt;
-        ///		&lt;direction&gt;up&lt;/direction&gt;
-        ///		&lt;x&gt;140&lt;/x&gt;
-        ///		&lt;y&gt;277&lt;/y&gt;
-        ///	&lt;/Car&gt;
-        ///	&lt;Car&gt;
-        ///		&lt;colour&gt;red&lt;/colour&gt;
-        ///		&lt;direction&gt;up&lt;/direction&gt;
-        ///	 [rest of string was truncated]&quot;;.
-        /// </summary>
-        internal static string EasyLevel {
-            get {
-                return ResourceManager.GetString("EasyLevel", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap Exit_Door {
