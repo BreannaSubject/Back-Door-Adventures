@@ -124,11 +124,29 @@
   <data name="Back_Door_Door" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Back Door Door.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Blue_Car_Down" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Blue Car Down.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Blue_Car_Up" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Blue Car Up.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Button_Background" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Button Background.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Button_Background_Inverted" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Button Background Inverted.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Chan_Back" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Chan Back.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Chan_Forward" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Chan Forward.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Chan_Left" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Chan Left.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Chan_Right" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Chan Right.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Clé" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Clé.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -136,19 +154,43 @@
   <data name="Controls_Screen" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Controls Screen.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="EasyLevel" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\EasyLevel.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
   <data name="Easy_Door" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Easy Door.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Exit_Door" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Exit Door.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="God_s_Menu_Background_Screen" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\God's Menu Background Screen.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="God_s_Menu_Door" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\God's Menu Door.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Health_Bar_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Health Bar 1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Health_Bar_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Health Bar 2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Health_Bar_Empty" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Health Bar Empty.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Health_Bar_Full" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Health Bar Full.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="High_Score_Screen" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\High Score Screen.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Menu_Screen" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Menu Screen.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Red_Car_Down" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Red Car Down.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Red_Car_Up" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Red Car Up.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

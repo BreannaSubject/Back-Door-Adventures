@@ -52,6 +52,12 @@
     <Compile Include="ControlsScreen.Designer.cs">
       <DependentUpon>ControlsScreen.cs</DependentUpon>
     </Compile>
+    <Compile Include="EasyLevel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="EasyLevel.Designer.cs">
+      <DependentUpon>EasyLevel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -80,6 +86,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="ControlsScreen.resx">
       <DependentUpon>ControlsScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EasyLevel.resx">
+      <DependentUpon>EasyLevel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -148,6 +157,50 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Controls Screen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Health Bar 1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Health Bar 2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Health Bar Empty.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Health Bar Full.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Red Car Up.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Red Car Down.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Blue Car Up.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Blue Car Down.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\God%27s Menu Background Screen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Chan Forward.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Chan Right.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Chan Left.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Chan Back.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="EasyLevel.xml" />
+    <None Include="bin\Debug\XMLFile1.xml" />
+    <Content Include="XMLFile1.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

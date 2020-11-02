@@ -83,6 +83,26 @@ namespace Back_Door_Adventures.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Blue_Car_Down {
+            get {
+                object obj = ResourceManager.GetObject("Blue_Car_Down", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Blue_Car_Up {
+            get {
+                object obj = ResourceManager.GetObject("Blue_Car_Up", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Button_Background {
             get {
                 object obj = ResourceManager.GetObject("Button_Background", resourceCulture);
@@ -96,6 +116,46 @@ namespace Back_Door_Adventures.Properties {
         internal static System.Drawing.Bitmap Button_Background_Inverted {
             get {
                 object obj = ResourceManager.GetObject("Button_Background_Inverted", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Chan_Back {
+            get {
+                object obj = ResourceManager.GetObject("Chan_Back", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Chan_Forward {
+            get {
+                object obj = ResourceManager.GetObject("Chan_Forward", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Chan_Left {
+            get {
+                object obj = ResourceManager.GetObject("Chan_Left", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Chan_Right {
+            get {
+                object obj = ResourceManager.GetObject("Chan_Right", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -131,6 +191,44 @@ namespace Back_Door_Adventures.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to &lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; ?&gt;
+        ///&lt;level&gt;
+        ///	&lt;Car&gt;
+        ///		&lt;colour&gt;blue&lt;/colour&gt;
+        ///		&lt;direction&gt;down&lt;/direction&gt;
+        ///		&lt;x&gt;104&lt;/x&gt;
+        ///		&lt;y&gt;12&lt;/y&gt;
+        ///	&lt;/Car&gt;
+        ///	&lt;Car&gt;
+        ///		&lt;colour&gt;red&lt;/colour&gt;
+        ///		&lt;direction&gt;down&lt;/direction&gt;
+        ///		&lt;x&gt;104&lt;/x&gt;
+        ///		&lt;y&gt;121&lt;/y&gt;
+        ///	&lt;/Car&gt;
+        ///	&lt;Car&gt;
+        ///		&lt;colour&gt;blue&lt;/colour&gt;
+        ///		&lt;direction&gt;down&lt;/direction&gt;
+        ///		&lt;x&gt;104&lt;/x&gt;
+        ///		&lt;y&gt;343&lt;/y&gt;
+        ///	&lt;/Car&gt;
+        ///	&lt;Car&gt;
+        ///		&lt;colour&gt;blue&lt;/colour&gt;
+        ///		&lt;direction&gt;up&lt;/direction&gt;
+        ///		&lt;x&gt;140&lt;/x&gt;
+        ///		&lt;y&gt;277&lt;/y&gt;
+        ///	&lt;/Car&gt;
+        ///	&lt;Car&gt;
+        ///		&lt;colour&gt;red&lt;/colour&gt;
+        ///		&lt;direction&gt;up&lt;/direction&gt;
+        ///	 [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string EasyLevel {
+            get {
+                return ResourceManager.GetString("EasyLevel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap Exit_Door {
@@ -143,9 +241,59 @@ namespace Back_Door_Adventures.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap God_s_Menu_Background_Screen {
+            get {
+                object obj = ResourceManager.GetObject("God_s_Menu_Background_Screen", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap God_s_Menu_Door {
             get {
                 object obj = ResourceManager.GetObject("God_s_Menu_Door", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Health_Bar_1 {
+            get {
+                object obj = ResourceManager.GetObject("Health_Bar_1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Health_Bar_2 {
+            get {
+                object obj = ResourceManager.GetObject("Health_Bar_2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Health_Bar_Empty {
+            get {
+                object obj = ResourceManager.GetObject("Health_Bar_Empty", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Health_Bar_Full {
+            get {
+                object obj = ResourceManager.GetObject("Health_Bar_Full", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -166,6 +314,26 @@ namespace Back_Door_Adventures.Properties {
         internal static System.Drawing.Bitmap Menu_Screen {
             get {
                 object obj = ResourceManager.GetObject("Menu_Screen", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Red_Car_Down {
+            get {
+                object obj = ResourceManager.GetObject("Red_Car_Down", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Red_Car_Up {
+            get {
+                object obj = ResourceManager.GetObject("Red_Car_Up", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

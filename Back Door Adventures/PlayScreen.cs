@@ -19,7 +19,12 @@ namespace Back_Door_Adventures
 
         private void easyButton_Click(object sender, EventArgs e)
         {
-
+            easyButton.Visible = false;
+            mediumButton.Visible = false;
+            hardButton.Visible = false;
+            exitButton.Visible = false;
+            EasyLevel el = new EasyLevel();
+            this.Controls.Add(el);
         }
 
         private void mediumButton_Click(object sender, EventArgs e)
