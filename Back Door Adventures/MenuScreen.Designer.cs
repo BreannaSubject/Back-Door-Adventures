@@ -48,6 +48,7 @@
             this.playButton.Text = "Play";
             this.playButton.UseVisualStyleBackColor = true;
             this.playButton.Click += new System.EventHandler(this.playButton_Click);
+            this.playButton.Enter += new System.EventHandler(this.playButton_Enter);
             // 
             // controlButton
             // 
@@ -63,6 +64,7 @@
             this.controlButton.Text = "Controls";
             this.controlButton.UseVisualStyleBackColor = true;
             this.controlButton.Click += new System.EventHandler(this.controlButton_Click);
+            this.controlButton.Enter += new System.EventHandler(this.controlButton_Enter);
             // 
             // highScoreButton
             // 
@@ -78,6 +80,7 @@
             this.highScoreButton.Text = "High Score";
             this.highScoreButton.UseVisualStyleBackColor = true;
             this.highScoreButton.Click += new System.EventHandler(this.highScoreButton_Click);
+            this.highScoreButton.Enter += new System.EventHandler(this.highScoreButton_Enter);
             // 
             // exitButton
             // 
@@ -93,12 +96,14 @@
             this.exitButton.Text = "Exit";
             this.exitButton.UseVisualStyleBackColor = true;
             this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
+            this.exitButton.Enter += new System.EventHandler(this.exitButton_Enter);
             // 
             // MenuScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Back_Door_Adventures.Properties.Resources.Menu_Screen;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Controls.Add(this.exitButton);
             this.Controls.Add(this.highScoreButton);
             this.Controls.Add(this.controlButton);

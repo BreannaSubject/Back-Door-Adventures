@@ -93,9 +93,29 @@ namespace Back_Door_Adventures.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Button_Background_Inverted {
+            get {
+                object obj = ResourceManager.GetObject("Button_Background_Inverted", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Clé {
             get {
                 object obj = ResourceManager.GetObject("Clé", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Controls_Screen {
+            get {
+                object obj = ResourceManager.GetObject("Controls_Screen", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -126,6 +146,16 @@ namespace Back_Door_Adventures.Properties {
         internal static System.Drawing.Bitmap God_s_Menu_Door {
             get {
                 object obj = ResourceManager.GetObject("God_s_Menu_Door", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap High_Score_Screen {
+            get {
+                object obj = ResourceManager.GetObject("High_Score_Screen", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

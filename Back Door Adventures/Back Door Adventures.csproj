@@ -46,11 +46,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ControlsScreen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlsScreen.Designer.cs">
+      <DependentUpon>ControlsScreen.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HighScoreScreen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="HighScoreScreen.Designer.cs">
+      <DependentUpon>HighScoreScreen.cs</DependentUpon>
     </Compile>
     <Compile Include="MenuScreen.cs">
       <SubType>UserControl</SubType>
@@ -66,8 +78,14 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="ControlsScreen.resx">
+      <DependentUpon>ControlsScreen.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HighScoreScreen.resx">
+      <DependentUpon>HighScoreScreen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MenuScreen.resx">
       <DependentUpon>MenuScreen.cs</DependentUpon>
@@ -121,6 +139,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Back Door Door.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Button Background Inverted.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\High Score Screen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Controls Screen.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

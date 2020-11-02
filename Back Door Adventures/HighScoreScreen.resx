@@ -117,38 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="Back_Door" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Back Door.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Back_Door_Door" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Back Door Door.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Button_Background" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Button Background.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Button_Background_Inverted" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Button Background Inverted.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Clé" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Clé.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Controls_Screen" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Controls Screen.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Easy_Door" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Easy Door.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Exit_Door" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Exit Door.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="God_s_Menu_Door" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\God's Menu Door.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="High_Score_Screen" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\High Score Screen.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Menu_Screen" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Menu Screen.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
 </root>

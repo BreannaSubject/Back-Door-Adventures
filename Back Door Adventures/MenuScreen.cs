@@ -29,17 +29,59 @@ namespace Back_Door_Adventures
 
         private void controlButton_Click(object sender, EventArgs e)
         {
-
+            playButton.Visible = false;
+            controlButton.Visible = false;
+            highScoreButton.Visible = false;
+            exitButton.Visible = false;
+            ControlsScreen cs = new ControlsScreen();
+            this.Controls.Add(cs);
         }
 
         private void highScoreButton_Click(object sender, EventArgs e)
         {
-
+            playButton.Visible = false;
+            controlButton.Visible = false;
+            highScoreButton.Visible = false;
+            exitButton.Visible = false;
+            HighScoreScreen hs = new HighScoreScreen();
+            this.Controls.Add(hs);
         }
 
         private void exitButton_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void playButton_Enter(object sender, EventArgs e)
+        {
+            playButton.BackgroundImage = Properties.Resources.Button_Background_Inverted;
+            controlButton.BackgroundImage = Properties.Resources.Button_Background;
+            highScoreButton.BackgroundImage = Properties.Resources.Button_Background;
+            exitButton.BackgroundImage = Properties.Resources.Button_Background;
+        }
+
+        private void controlButton_Enter(object sender, EventArgs e)
+        {
+            playButton.BackgroundImage = Properties.Resources.Button_Background;
+            controlButton.BackgroundImage = Properties.Resources.Button_Background_Inverted;
+            highScoreButton.BackgroundImage = Properties.Resources.Button_Background;
+            exitButton.BackgroundImage = Properties.Resources.Button_Background;
+        }
+
+        private void highScoreButton_Enter(object sender, EventArgs e)
+        {
+            playButton.BackgroundImage = Properties.Resources.Button_Background;
+            controlButton.BackgroundImage = Properties.Resources.Button_Background;
+            highScoreButton.BackgroundImage = Properties.Resources.Button_Background_Inverted;
+            exitButton.BackgroundImage = Properties.Resources.Button_Background;
+        }
+
+        private void exitButton_Enter(object sender, EventArgs e)
+        {
+            playButton.BackgroundImage = Properties.Resources.Button_Background;
+            controlButton.BackgroundImage = Properties.Resources.Button_Background;
+            highScoreButton.BackgroundImage = Properties.Resources.Button_Background;
+            exitButton.BackgroundImage = Properties.Resources.Button_Background_Inverted;
         }
     }
 }
