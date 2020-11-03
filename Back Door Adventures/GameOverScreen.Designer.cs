@@ -30,6 +30,7 @@
         {
             this.playAgainButton = new System.Windows.Forms.Button();
             this.exitButton = new System.Windows.Forms.Button();
+            this.scoreLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // playAgainButton
@@ -64,15 +65,26 @@
             this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
             this.exitButton.Enter += new System.EventHandler(this.exitButton_Enter);
             // 
+            // scoreLabel
+            // 
+            this.scoreLabel.Font = new System.Drawing.Font("Vivaldi", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.scoreLabel.Location = new System.Drawing.Point(44, 99);
+            this.scoreLabel.Name = "scoreLabel";
+            this.scoreLabel.Size = new System.Drawing.Size(265, 34);
+            this.scoreLabel.TabIndex = 2;
+            this.scoreLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // GameOverScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Back_Door_Adventures.Properties.Resources.Game_Over_Screen;
+            this.Controls.Add(this.scoreLabel);
             this.Controls.Add(this.exitButton);
             this.Controls.Add(this.playAgainButton);
             this.Name = "GameOverScreen";
             this.Size = new System.Drawing.Size(700, 400);
+            this.Load += new System.EventHandler(this.GameOverScreen_Load);
             this.ResumeLayout(false);
 
         }
@@ -81,5 +93,6 @@
 
         private System.Windows.Forms.Button playAgainButton;
         private System.Windows.Forms.Button exitButton;
+        private System.Windows.Forms.Label scoreLabel;
     }
 }
