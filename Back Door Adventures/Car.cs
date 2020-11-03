@@ -9,30 +9,37 @@ namespace Back_Door_Adventures
 {
     class Car
     {
-        public string colour;
-        public bool direction;
-        public int x, y, speed, size;
+        public string colour, direction;
+        public int x, y, size;
 
-        public Car(string _colour, bool _direction, int _x, int _y, int _speed, int _size)
+        public Car(string _colour, string _direction, int _x, int _y, int _size)
         {
             colour = _colour;
             direction = _direction;
             x = _x;
             y = _y;
-            speed = _speed;
             size = _size;
         }
 
-        public void Move()
+        public void UpMove(int speed)
         {
-            if (direction == true)
+            y = y - speed;
+        }
+
+        public void Move (int speed, string direction)
+        {
+            if (direction == "up")
             {
-                y += speed;
+                y = y - speed;
             }
-            else
+            else if (direction == "down")
             {
-                y -= speed;
+                y = y + speed;
             }
+        }
+        public void DownMove (int speed)
+        {
+            y = y + speed;
         }
     }
 

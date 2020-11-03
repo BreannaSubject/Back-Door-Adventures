@@ -12,6 +12,7 @@ namespace Back_Door_Adventures
 {
     public partial class Form1 : Form
     {
+        public static bool leftArrowDown, rightArrowDown, upArrowDown, downArrowDown; //booleans for Arrow Keys
         public Form1()
         {
             InitializeComponent();

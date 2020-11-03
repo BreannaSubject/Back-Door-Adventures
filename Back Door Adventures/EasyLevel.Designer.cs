@@ -36,7 +36,7 @@
             // gameLoopTimer
             // 
             this.gameLoopTimer.Enabled = true;
-            this.gameLoopTimer.Interval = 14;
+            this.gameLoopTimer.Interval = 18;
             this.gameLoopTimer.Tick += new System.EventHandler(this.gameLoopTimer_Tick);
             // 
             // EasyLevel
@@ -44,10 +44,13 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.DoubleBuffered = true;
             this.Name = "EasyLevel";
             this.Size = new System.Drawing.Size(700, 400);
             this.Load += new System.EventHandler(this.EasyLevel_Load);
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.EasyLevel_Paint);
+            this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.EasyLevel_KeyUp);
+            this.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.EasyLevel_PreviewKeyDown);
             this.ResumeLayout(false);
 
         }
