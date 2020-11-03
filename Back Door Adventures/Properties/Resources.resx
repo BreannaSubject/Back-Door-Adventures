@@ -160,6 +160,9 @@
   <data name="Exit_Door" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Exit Door.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Game_Over_Screen" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Game Over Screen.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="God_s_Menu_Background_Screen" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\God's Menu Background Screen.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>

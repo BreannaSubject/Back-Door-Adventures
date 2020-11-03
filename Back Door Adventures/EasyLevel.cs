@@ -18,10 +18,12 @@ namespace Back_Door_Adventures
         int carSize = 20;
         int heroSpeed = 5;
         int heroSize = 36;
-        string direction, heroDirection;
+        string direction;
         Random random = new Random();
         int tick = 0;
         Hero chan;
+        int lives = 3;
+        Rectangle key;
         public EasyLevel()
         {
             InitializeComponent();
@@ -34,7 +36,8 @@ namespace Back_Door_Adventures
             Form1.upArrowDown = false;
             Form1.downArrowDown = false;
 
-            chan = new Hero(140 / 2, this.Height / 2, heroSpeed, heroSpeed, heroSize, "right");
+            chan = new Hero(Form1.heroStart, this.Height / 2, heroSpeed, heroSpeed, heroSize, "right");
+            key = new Rectangle(this.Width - heroSize, this.Height / 2, Form1.keySize, Form1.keySize);
             XmlReader reader = XmlReader.Create("EasyLevel.xml");
 
             while (reader.Read())
@@ -102,7 +105,7 @@ namespace Back_Door_Adventures
 
         public void MakeBottomCars()
         {
-            int y = this.Height - carSize*2;
+            int y = this.Height - carSize * 2;
             int randPosition, position, randColour;
             string newDirection, carColour;
 
@@ -188,12 +191,59 @@ namespace Back_Door_Adventures
             cars.Add(c);
         }
 
+        public void Intersection()
+        {
+            Rectangle chanRec = new Rectangle(chan.x, chan.y, chan.size, chan.size);
+
+            foreach (Car c in cars)
+            {
+                Rectangle carRec = new Rectangle(c.x, c.y, c.size, c.size);
+
+                if (carRec.IntersectsWith(chanRec))
+                {
+                    chan.x = Form1.heroStart;
+                    chan.y = this.Height / 2;
+                    lives--;
+                }
+            }
+
+            if (lives == 3)
+            {
+                healthBox.BackgroundImage = Properties.Resources.Health_Bar_Full;
+            }
+            else if (lives == 2)
+            {
+                healthBox.BackgroundImage = Properties.Resources.Health_Bar_2;
+            }
+            else if (lives == 1)
+            {
+                healthBox.BackgroundImage = Properties.Resources.Health_Bar_1;
+            }
+            else if (lives == 0)
+            {
+                Form1.win = false;
+                gameLoopTimer.Enabled = false;
+                healthBox.Visible = false;
+                GameOverScreen go = new GameOverScreen();
+                this.Controls.Add(go);
+            }
+
+            if (chanRec.IntersectsWith(key))
+            {
+                Form1.win = true;
+                gameLoopTimer.Enabled = false;
+                healthBox.Visible = false;
+                GameOverScreen go = new GameOverScreen();
+                this.Controls.Add(go);
+            }
+        }
+
 
 
         private void gameLoopTimer_Tick(object sender, EventArgs e)
         {
-
-            tick +=  4;
+            
+            tick +=  2;
 
             if (tick == 200)
             {
@@ -222,7 +272,7 @@ namespace Back_Door_Adventures
                 }
             }
 
-            if (Form1.leftArrowDown == true && chan.x < this.Width - chan.size*2)
+            if (Form1.leftArrowDown == true && chan.x < this.Width - chan.size)
             {
                 chan.Move("left");
                 chan.direction = "left";
@@ -243,11 +293,14 @@ namespace Back_Door_Adventures
                 chan.direction = "up";
             }
 
+            Intersection();
+
             Refresh();
         }
 
         private void EasyLevel_Paint(object sender, PaintEventArgs e)
         {
+            e.Graphics.DrawImage(Properties.Resources.Clé, key);
 
             if (chan.direction == "right")
             {

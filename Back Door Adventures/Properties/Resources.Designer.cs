@@ -203,6 +203,16 @@ namespace Back_Door_Adventures.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Game_Over_Screen {
+            get {
+                object obj = ResourceManager.GetObject("Game_Over_Screen", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap God_s_Menu_Background_Screen {
             get {
                 object obj = ResourceManager.GetObject("God_s_Menu_Background_Screen", resourceCulture);
