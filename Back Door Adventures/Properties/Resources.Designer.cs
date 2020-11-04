@@ -303,9 +303,29 @@ namespace Back_Door_Adventures.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Health_Bar_1_Green {
+            get {
+                object obj = ResourceManager.GetObject("Health_Bar_1_Green", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Health_Bar_2 {
             get {
                 object obj = ResourceManager.GetObject("Health_Bar_2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Health_Bar_2_Green {
+            get {
+                object obj = ResourceManager.GetObject("Health_Bar_2_Green", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -326,6 +346,16 @@ namespace Back_Door_Adventures.Properties {
         internal static System.Drawing.Bitmap Health_Bar_Full {
             get {
                 object obj = ResourceManager.GetObject("Health_Bar_Full", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Health_Bar_Full_Green {
+            get {
+                object obj = ResourceManager.GetObject("Health_Bar_Full_Green", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

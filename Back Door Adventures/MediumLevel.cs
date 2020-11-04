@@ -114,11 +114,11 @@ namespace Back_Door_Adventures
                         if (dSRec.IntersectsWith(lSRec))
                         {
                             Rectangle explosion = new Rectangle(ls.x, ds.y, skullSize, skullSize);
-                            for (int i2 = 0; i < explosions.Count(); i++)
+                            for (int i2 = 0; i2 < explosions.Count(); i2++)
                             {
-                                if (explosion.IntersectsWith(explosions[i]))
+                                if (explosion.IntersectsWith(explosions[i2]))
                                 {
-                                    explosions.RemoveAt(i);
+                                    explosions.RemoveAt(i2);
                                 }
                             }
                             explosions.Add(explosion);
@@ -128,7 +128,126 @@ namespace Back_Door_Adventures
                     }
                 }
             }
+        }
 
+        public void ExplosionIntersection ()
+        {
+            Rectangle chanRec = new Rectangle(chan.x, chan.y, chan.size, chan.size);
+
+            foreach (Rectangle ex in explosions)
+            {
+                if (ex.IntersectsWith(chanRec))
+                {
+                    Form1.oneLife = true;
+                    chan.x = Form1.heroStart;
+                    chan.y = this.Height / 2;
+                    
+                }
+            }
+        }
+
+        public void Intersection()
+        {
+            Rectangle chanRec = new Rectangle(chan.x, chan.y, chan.size, chan.size);
+
+            foreach (Skull s in leftSkulls)
+            {
+                Rectangle skullRec = new Rectangle(s.x, s.y, s.size, s.size);
+
+                if (skullRec.IntersectsWith(chanRec))
+                {
+                    chan.x = Form1.heroStart;
+                    chan.y = this.Height / 2;
+
+                    if (Form1.oneLife == true)
+                    {
+                        Form1.stopTime = DateTime.Now;
+                        Form1.win = false;
+                        gameLoopTimer.Enabled = false;
+                        healthBox.Visible = false;
+                        lightBox.Visible = false;
+                        GameOverScreen go = new GameOverScreen();
+                        this.Controls.Add(go);
+                    }
+                    else if (Form1.oneLife == false)
+                    {
+                        Form1.lives--;
+                    }
+                }
+            }
+
+            foreach (Skull s in downSkulls)
+            {
+                Rectangle skullRec = new Rectangle(s.x, s.y, s.size, s.size);
+
+                if (skullRec.IntersectsWith(chanRec))
+                {
+                    chan.x = Form1.heroStart;
+                    chan.y = this.Height / 2;
+
+                    if (Form1.oneLife == true)
+                    {
+                        Form1.stopTime = DateTime.Now;
+                        Form1.win = false;
+                        gameLoopTimer.Enabled = false;
+                        healthBox.Visible = false;
+                        lightBox.Visible = false;
+                        GameOverScreen go = new GameOverScreen();
+                        this.Controls.Add(go);
+                    }
+                    else if (Form1.oneLife == false)
+                    {
+                        Form1.lives--;
+                    }
+
+                }
+            }
+
+            if (Form1.lives == 3 && Form1.oneLife == false)
+            {
+                healthBox.BackgroundImage = Properties.Resources.Health_Bar_Full;
+            }
+            else if (Form1.lives == 3 && Form1.oneLife == true)
+            {
+                healthBox.BackgroundImage = Properties.Resources.Health_Bar_Full_Green;
+            }
+            else if (Form1.lives == 2 && Form1.oneLife == true)
+            {
+                healthBox.BackgroundImage = Properties.Resources.Health_Bar_2_Green;
+            }
+            else if (Form1.lives == 2)
+            {
+                healthBox.BackgroundImage = Properties.Resources.Health_Bar_2;
+            }
+            else if (Form1.lives == 1 && Form1.oneLife == true)
+            {
+                healthBox.BackgroundImage = Properties.Resources.Health_Bar_1_Green;
+            }
+            else if (Form1.lives == 1)
+            {
+                healthBox.BackgroundImage = Properties.Resources.Health_Bar_1;
+            }
+            else if (Form1.lives == 0 )
+            {
+                Form1.stopTime = DateTime.Now;
+                Form1.win = false;
+                gameLoopTimer.Enabled = false;
+                healthBox.Visible = false;
+                lightBox.Visible = false;
+                GameOverScreen go = new GameOverScreen();
+                this.Controls.Add(go);
+            }
+
+            if (chanRec.IntersectsWith(key))
+            {
+                Form1.stopTime = DateTime.Now;
+                Form1.win = true;
+                gameLoopTimer.Enabled = false;
+                healthBox.Visible = false;
+                lightBox.Visible = false;
+                GameOverScreen go = new GameOverScreen();
+                this.Controls.Add(go);
+            }
 
             
         }
@@ -146,6 +265,7 @@ namespace Back_Door_Adventures
             }
 
             SkullIntersection();
+            ExplosionIntersection();
 
             foreach (Skull s in leftSkulls)
             {
@@ -193,6 +313,8 @@ namespace Back_Door_Adventures
                 chan.Move("up");
                 chan.direction = "up";
             }
+
+            Intersection();
 
             Refresh();
         }

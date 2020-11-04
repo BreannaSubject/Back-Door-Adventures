@@ -221,6 +221,9 @@
   <ItemGroup>
     <Content Include="bin\Debug\EasyLevel.xml" />
     <Content Include="bin\Debug\MediumLevel.xml" />
+    <None Include="Resources\Health Bar 1 Green.png" />
+    <None Include="Resources\Health Bar 2 Green.png" />
+    <None Include="Resources\Health Bar Full Green.png" />
     <None Include="Resources\Easy Skull.png" />
     <None Include="Resources\Easy Skull Foreward.png" />
     <None Include="Resources\Easy Background Screen.png" />

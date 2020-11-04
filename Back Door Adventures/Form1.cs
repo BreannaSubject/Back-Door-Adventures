@@ -15,6 +15,7 @@ namespace Back_Door_Adventures
     {
         public static bool leftArrowDown, rightArrowDown, upArrowDown, downArrowDown; //booleans for Arrow Keys
         public static bool win;
+        public static bool oneLife = false;
         public static int heroStart = 50;
         public static int keySize = 32;
         public static int lives = 3;

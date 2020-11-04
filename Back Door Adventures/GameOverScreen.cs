@@ -24,6 +24,7 @@ namespace Back_Door_Adventures
 
         private void GameOverScreen_Load(object sender, EventArgs e)
         {
+            Form1.oneLife = false;
             int time = (Form1.stopTime - Form1.startTime).Milliseconds;
 
             if (Form1.win == true)
