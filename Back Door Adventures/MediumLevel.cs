@@ -24,6 +24,7 @@ namespace Back_Door_Adventures
         Random random = new Random();
         List<Skull> downSkulls = new List<Skull>();
         List<Skull> leftSkulls = new List<Skull>();
+        List<Rectangle> explosions = new List<Rectangle>();
         public MediumLevel()
         {
             InitializeComponent();
@@ -72,10 +73,13 @@ namespace Back_Door_Adventures
         public void MakeDownSkulls()
         {
             skullDirection = false;
-            int x = random.Next(50, 629);
+            int x1 = random.Next(50, 280);
+            int x2 = random.Next(314, 629);
             int y = 45;
-            Skull skull = new Skull(skullDirection, x, y, skullSpeed, skullSize);
-            downSkulls.Add(skull);
+            Skull skull1 = new Skull(skullDirection, x1, y, skullSpeed, skullSize);
+            Skull skull2 = new Skull(skullDirection, x2, y, skullSpeed, skullSize);
+            downSkulls.Add(skull1);
+            downSkulls.Add(skull2);
 
         }
 
@@ -93,6 +97,42 @@ namespace Back_Door_Adventures
             leftSkulls.Add(skull2);
         }
 
+        public void SkullIntersection()
+        {
+            if (leftSkulls.Count() >= 1 && downSkulls.Count() >= 1)
+            {
+                for (int i1 = 0; i1 < leftSkulls.Count; i1++)
+                {
+                    Skull ls = leftSkulls[i1];
+                    Rectangle lSRec = new Rectangle(ls.x, ls.y, ls.size, ls.size);
+
+                    for (int i = 0; i < downSkulls.Count; i++)
+                    {
+                        Skull ds = downSkulls[i];
+                        Rectangle dSRec = new Rectangle(ds.x, ds.y, ds.size, ds.size);
+
+                        if (dSRec.IntersectsWith(lSRec))
+                        {
+                            Rectangle explosion = new Rectangle(ls.x, ds.y, skullSize, skullSize);
+                            for (int i2 = 0; i < explosions.Count(); i++)
+                            {
+                                if (explosion.IntersectsWith(explosions[i]))
+                                {
+                                    explosions.RemoveAt(i);
+                                }
+                            }
+                            explosions.Add(explosion);
+                            leftSkulls.Remove(ls);
+                            downSkulls.Remove(ds);
+                        }
+                    }
+                }
+            }
+
+
+            
+        }
+
         private void gameLoopTimer_Tick(object sender, EventArgs e)
         {
             Form1.startTime = DateTime.Now;
@@ -104,6 +144,8 @@ namespace Back_Door_Adventures
                 MakeLeftSkulls();
                 tick = 0;
             }
+
+            SkullIntersection();
 
             foreach (Skull s in leftSkulls)
             {
@@ -224,6 +266,11 @@ namespace Back_Door_Adventures
             foreach (Skull s in downSkulls)
             {
                 e.Graphics.DrawImage(Properties.Resources.Easy_Skull_Foreward, s.x, s.y, s.size, s.size);
+            }
+
+            foreach (Rectangle ex in explosions)
+            {
+                e.Graphics.DrawImage(Properties.Resources.Green_Explosion, ex);
             }
         }
     }
