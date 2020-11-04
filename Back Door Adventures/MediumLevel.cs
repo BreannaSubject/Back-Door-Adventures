@@ -25,6 +25,8 @@ namespace Back_Door_Adventures
         List<Skull> downSkulls = new List<Skull>();
         List<Skull> leftSkulls = new List<Skull>();
         List<Rectangle> explosions = new List<Rectangle>();
+        Image blueLight = Properties.Resources.Blue_Easy_Light;
+        Image greenLight = Properties.Resources.Green_Easy_Light;
         public MediumLevel()
         {
             InitializeComponent();
@@ -32,6 +34,8 @@ namespace Back_Door_Adventures
 
         private void MediumLevel_Load(object sender, EventArgs e)
         {
+            lightBox.BackgroundImage = blueLight;
+
             Form1.leftArrowDown = false;
             Form1.rightArrowDown = false;
             Form1.upArrowDown = false;
@@ -113,6 +117,15 @@ namespace Back_Door_Adventures
 
                         if (dSRec.IntersectsWith(lSRec))
                         {
+                            if (lightBox.BackgroundImage == blueLight)
+                            {
+                                lightBox.BackgroundImage = greenLight;
+                            }
+                            else if (lightBox.BackgroundImage == greenLight)
+                            {
+                                lightBox.BackgroundImage = blueLight;
+                            }
+
                             Rectangle explosion = new Rectangle(ls.x, ds.y, skullSize, skullSize);
                             for (int i2 = 0; i2 < explosions.Count(); i2++)
                             {
@@ -122,6 +135,7 @@ namespace Back_Door_Adventures
                                 }
                             }
                             explosions.Add(explosion);
+                            
                             leftSkulls.Remove(ls);
                             downSkulls.Remove(ds);
                         }
