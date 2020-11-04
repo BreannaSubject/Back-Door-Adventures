@@ -39,7 +39,12 @@ namespace Back_Door_Adventures
 
         private void hardButton_Click(object sender, EventArgs e)
         {
-
+            easyButton.Visible = false;
+            mediumButton.Visible = false;
+            hardButton.Visible = false;
+            exitButton.Visible = false;
+            HardLevel hl = new HardLevel();
+            this.Controls.Add(hl);
         }
 
         private void exitButton_Click(object sender, EventArgs e)

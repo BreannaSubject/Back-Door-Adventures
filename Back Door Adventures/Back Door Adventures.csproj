@@ -71,6 +71,12 @@
     <Compile Include="GameOverScreen.Designer.cs">
       <DependentUpon>GameOverScreen.cs</DependentUpon>
     </Compile>
+    <Compile Include="HardLevel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="HardLevel.Designer.cs">
+      <DependentUpon>HardLevel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Hero.cs" />
     <Compile Include="HighScoreScreen.cs">
       <SubType>UserControl</SubType>
@@ -110,6 +116,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GameOverScreen.resx">
       <DependentUpon>GameOverScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HardLevel.resx">
+      <DependentUpon>HardLevel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="HighScoreScreen.resx">
       <DependentUpon>HighScoreScreen.cs</DependentUpon>
@@ -221,6 +230,9 @@
   <ItemGroup>
     <Content Include="bin\Debug\EasyLevel.xml" />
     <Content Include="bin\Debug\MediumLevel.xml" />
+    <None Include="Resources\Back Door Screen.png" />
+    <None Include="Resources\Inverted Oni.png" />
+    <None Include="Resources\Oni.png" />
     <None Include="Resources\Health Bar 1 Green.png" />
     <None Include="Resources\Health Bar 2 Green.png" />
     <None Include="Resources\Health Bar Full Green.png" />

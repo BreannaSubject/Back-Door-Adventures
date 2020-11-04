@@ -124,6 +124,9 @@
   <data name="Back_Door_Door" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Back Door Door.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Back_Door_Screen" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Back Door Screen.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Blue_Car_Down" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Blue Car Down.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -211,8 +214,14 @@
   <data name="High_Score_Screen" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\High Score Screen.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Inverted_Oni" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Inverted Oni.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Menu_Screen" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Menu Screen.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Oni" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Oni.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Red_Car_Down" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Red Car Down.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>

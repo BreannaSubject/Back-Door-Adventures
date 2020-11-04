@@ -83,6 +83,16 @@ namespace Back_Door_Adventures.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Back_Door_Screen {
+            get {
+                object obj = ResourceManager.GetObject("Back_Door_Screen", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Blue_Car_Down {
             get {
                 object obj = ResourceManager.GetObject("Blue_Car_Down", resourceCulture);
@@ -373,9 +383,29 @@ namespace Back_Door_Adventures.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Inverted_Oni {
+            get {
+                object obj = ResourceManager.GetObject("Inverted_Oni", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Menu_Screen {
             get {
                 object obj = ResourceManager.GetObject("Menu_Screen", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Oni {
+            get {
+                object obj = ResourceManager.GetObject("Oni", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
