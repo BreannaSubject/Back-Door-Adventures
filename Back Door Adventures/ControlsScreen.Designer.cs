@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.returnButton = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // returnButton
@@ -47,12 +48,25 @@
             this.returnButton.Click += new System.EventHandler(this.returnButton_Click);
             this.returnButton.Enter += new System.EventHandler(this.returnButton_Enter);
             // 
+            // label1
+            // 
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Vivaldi", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(20, 120);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(320, 150);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Use your arrow keys to move the character. Watch your health bar, because if it t" +
+    "urns green, you only have one life.";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // ControlsScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Back_Door_Adventures.Properties.Resources.Controls_Screen;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.returnButton);
             this.Name = "ControlsScreen";
             this.Size = new System.Drawing.Size(700, 400);
@@ -63,5 +77,6 @@
         #endregion
 
         private System.Windows.Forms.Button returnButton;
+        private System.Windows.Forms.Label label1;
     }
 }
