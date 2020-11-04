@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Diagnostics;
 
 namespace Back_Door_Adventures
 {
@@ -16,6 +17,9 @@ namespace Back_Door_Adventures
         public static bool win;
         public static int heroStart = 50;
         public static int keySize = 32;
+        public static int lives = 3;
+        public static DateTime startTime;
+        public static DateTime stopTime;
         public Form1()
         {
             InitializeComponent();

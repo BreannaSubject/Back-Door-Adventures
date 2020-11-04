@@ -103,6 +103,16 @@ namespace Back_Door_Adventures.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Blue_Easy_Light {
+            get {
+                object obj = ResourceManager.GetObject("Blue_Easy_Light", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Button_Background {
             get {
                 object obj = ResourceManager.GetObject("Button_Background", resourceCulture);
@@ -183,9 +193,39 @@ namespace Back_Door_Adventures.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Easy_Background_Screen {
+            get {
+                object obj = ResourceManager.GetObject("Easy_Background_Screen", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Easy_Door {
             get {
                 object obj = ResourceManager.GetObject("Easy_Door", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Easy_Skull {
+            get {
+                object obj = ResourceManager.GetObject("Easy_Skull", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Easy_Skull_Foreward {
+            get {
+                object obj = ResourceManager.GetObject("Easy_Skull_Foreward", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -226,6 +266,26 @@ namespace Back_Door_Adventures.Properties {
         internal static System.Drawing.Bitmap God_s_Menu_Door {
             get {
                 object obj = ResourceManager.GetObject("God_s_Menu_Door", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Green_Easy_Light {
+            get {
+                object obj = ResourceManager.GetObject("Green_Easy_Light", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Green_Explosion {
+            get {
+                object obj = ResourceManager.GetObject("Green_Explosion", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

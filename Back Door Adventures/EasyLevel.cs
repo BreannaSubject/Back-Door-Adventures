@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml;
+using System.Diagnostics;
 
 namespace Back_Door_Adventures
 {
@@ -22,7 +23,6 @@ namespace Back_Door_Adventures
         Random random = new Random();
         int tick = 0;
         Hero chan;
-        int lives = 3;
         Rectangle key;
         public EasyLevel()
         {
@@ -203,24 +203,25 @@ namespace Back_Door_Adventures
                 {
                     chan.x = Form1.heroStart;
                     chan.y = this.Height / 2;
-                    lives--;
+                    Form1.lives--;
                 }
             }
 
-            if (lives == 3)
+            if (Form1.lives == 3)
             {
                 healthBox.BackgroundImage = Properties.Resources.Health_Bar_Full;
             }
-            else if (lives == 2)
+            else if (Form1.lives == 2)
             {
                 healthBox.BackgroundImage = Properties.Resources.Health_Bar_2;
             }
-            else if (lives == 1)
+            else if (Form1.lives == 1)
             {
                 healthBox.BackgroundImage = Properties.Resources.Health_Bar_1;
             }
-            else if (lives == 0)
+            else if (Form1.lives == 0)
             {
+                Form1.stopTime = DateTime.Now;
                 Form1.win = false;
                 gameLoopTimer.Enabled = false;
                 healthBox.Visible = false;
@@ -230,6 +231,7 @@ namespace Back_Door_Adventures
 
             if (chanRec.IntersectsWith(key))
             {
+                Form1.stopTime = DateTime.Now;
                 Form1.win = true;
                 gameLoopTimer.Enabled = false;
                 healthBox.Visible = false;
@@ -242,7 +244,7 @@ namespace Back_Door_Adventures
 
         private void gameLoopTimer_Tick(object sender, EventArgs e)
         {
-            
+            Form1.startTime = DateTime.Now;
             tick +=  2;
 
             if (tick == 200)

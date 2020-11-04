@@ -31,6 +31,7 @@
             this.playAgainButton = new System.Windows.Forms.Button();
             this.exitButton = new System.Windows.Forms.Button();
             this.scoreLabel = new System.Windows.Forms.Label();
+            this.yourScoreLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // playAgainButton
@@ -67,18 +68,31 @@
             // 
             // scoreLabel
             // 
-            this.scoreLabel.Font = new System.Drawing.Font("Vivaldi", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.scoreLabel.Location = new System.Drawing.Point(44, 99);
+            this.scoreLabel.BackColor = System.Drawing.Color.Transparent;
+            this.scoreLabel.Font = new System.Drawing.Font("Vivaldi", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.scoreLabel.Location = new System.Drawing.Point(47, 133);
             this.scoreLabel.Name = "scoreLabel";
             this.scoreLabel.Size = new System.Drawing.Size(265, 34);
             this.scoreLabel.TabIndex = 2;
             this.scoreLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // yourScoreLabel
+            // 
+            this.yourScoreLabel.BackColor = System.Drawing.Color.Transparent;
+            this.yourScoreLabel.Font = new System.Drawing.Font("Vivaldi", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.yourScoreLabel.Location = new System.Drawing.Point(47, 87);
+            this.yourScoreLabel.Name = "yourScoreLabel";
+            this.yourScoreLabel.Size = new System.Drawing.Size(265, 34);
+            this.yourScoreLabel.TabIndex = 3;
+            this.yourScoreLabel.Text = "Your Score:";
+            this.yourScoreLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // GameOverScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Back_Door_Adventures.Properties.Resources.Game_Over_Screen;
+            this.Controls.Add(this.yourScoreLabel);
             this.Controls.Add(this.scoreLabel);
             this.Controls.Add(this.exitButton);
             this.Controls.Add(this.playAgainButton);
@@ -94,5 +108,6 @@
         private System.Windows.Forms.Button playAgainButton;
         private System.Windows.Forms.Button exitButton;
         private System.Windows.Forms.Label scoreLabel;
+        private System.Windows.Forms.Label yourScoreLabel;
     }
 }
