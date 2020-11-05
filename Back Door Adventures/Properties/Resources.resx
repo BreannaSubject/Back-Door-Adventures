@@ -160,6 +160,9 @@
   <data name="Controls_Screen" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Controls Screen.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="EasyLevel" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\EasyLevel.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
   <data name="Easy_Background_Screen" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Easy Background Screen.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -216,6 +219,9 @@
   </data>
   <data name="Inverted_Oni" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Inverted Oni.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MediumLevel" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\MediumLevel.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
   </data>
   <data name="Menu_Screen" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Menu Screen.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
