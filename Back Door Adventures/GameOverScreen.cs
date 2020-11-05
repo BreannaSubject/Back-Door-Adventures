@@ -30,11 +30,11 @@ namespace Back_Door_Adventures
             if (Form1.win == true)
             {
                 score += 500;
-                if (time > 60000)
+                if (time > 30000)
                 {
                     score += 250;
                 }
-                else if (time < 60000 && time > 30000)
+                else if (time < 30000 && time > 15000)
                 {
                     score += 500;
                 }
@@ -64,7 +64,7 @@ namespace Back_Door_Adventures
             
 
             int name = random.Next(0, 8);
-            int number = random.Next(0, 8);
+            int number = random.Next(1, 100);
 
             for (int i = 0; i < skz.Count(); i++)
             {

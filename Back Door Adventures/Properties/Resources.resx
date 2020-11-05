@@ -127,6 +127,9 @@
   <data name="Back_Door_Screen" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Back Door Screen.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Back_Door_Screen_Inverted" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Back Door Screen Inverted.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Blue_Car_Down" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Blue Car Down.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -213,6 +216,9 @@
   </data>
   <data name="Health_Bar_Full_Green" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Health Bar Full Green.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Health_Bar_Full_Green_Inverted" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Health Bar Full Green Inverted.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="High_Score_Screen" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\High Score Screen.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>

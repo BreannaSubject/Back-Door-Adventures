@@ -93,6 +93,16 @@ namespace Back_Door_Adventures.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Back_Door_Screen_Inverted {
+            get {
+                object obj = ResourceManager.GetObject("Back_Door_Screen_Inverted", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Blue_Car_Down {
             get {
                 object obj = ResourceManager.GetObject("Blue_Car_Down", resourceCulture);
@@ -404,6 +414,16 @@ namespace Back_Door_Adventures.Properties {
         internal static System.Drawing.Bitmap Health_Bar_Full_Green {
             get {
                 object obj = ResourceManager.GetObject("Health_Bar_Full_Green", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Health_Bar_Full_Green_Inverted {
+            get {
+                object obj = ResourceManager.GetObject("Health_Bar_Full_Green_Inverted", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

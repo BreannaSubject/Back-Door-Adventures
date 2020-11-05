@@ -96,6 +96,7 @@
     <Compile Include="MenuScreen.Designer.cs">
       <DependentUpon>MenuScreen.cs</DependentUpon>
     </Compile>
+    <Compile Include="Oni.cs" />
     <Compile Include="PlayScreen.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -230,6 +231,8 @@
   <ItemGroup>
     <Content Include="bin\Debug\EasyLevel.xml" />
     <Content Include="bin\Debug\MediumLevel.xml" />
+    <None Include="Resources\Back Door Screen Inverted.png" />
+    <None Include="Resources\Health Bar Full Green Inverted.png" />
     <None Include="Resources\Back Door Screen.png" />
     <None Include="Resources\Inverted Oni.png" />
     <None Include="Resources\Oni.png" />
