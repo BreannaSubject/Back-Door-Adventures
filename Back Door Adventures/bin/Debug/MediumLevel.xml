@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<level>
+	<Skull>
+		<x>130</x>
+		<y>45</y>
+		<direction>down</direction>
+	</Skull>
+	<Skull>
+		<x>200</x>
+		<y>50</y>
+		<direction>down</direction>
+	</Skull>
+	<Skull>
+		<x>423</x>
+		<y>109</y>
+		<direction>down</direction>
+	</Skull>
+	<Skull>
+		<x>664</x>
+		<y>109</y>
+		<direction>left</direction>
+	</Skull>
+	<Skull>
+		<x>508</x>
+		<y>289</y>
+		<direction>left</direction>
+	</Skull>
+	<Skull>
+		<x>598</x>
+		<y>200</y>
+		<direction></direction>
+	</Skull>
+</level>
