@@ -17,6 +17,7 @@ namespace Back_Door_Adventures
         List<Oni> oni = new List<Oni>();
         List<int> speeds = new List<int>();
         List<int> directions = new List<int>();
+        List<int> lastdirections = new List<int>();
         int oniSize = 50;
         int heroSpeed = 4;
         int heroSize = 36;
@@ -30,6 +31,7 @@ namespace Back_Door_Adventures
         Image normalScreen = Properties.Resources.Back_Door_Screen;
         Image oniImage = Properties.Resources.Oni;
         string image = "nonInvert";
+        public static bool flip = false;
         public HardLevel()
         {
             InitializeComponent();
@@ -75,6 +77,7 @@ namespace Back_Door_Adventures
                 direction = random.Next(1, 4);
                 speeds.Add(speed);
                 directions.Add(direction);
+                lastdirections.Add(direction);
             }
 
         }
@@ -122,7 +125,6 @@ namespace Back_Door_Adventures
         {
             tick++;
             Form form = this.FindForm();
-
             if (tick % 50 == 0)
             {
                 speeds.Clear();
@@ -130,10 +132,26 @@ namespace Back_Door_Adventures
 
                 for (int i =0; i < oni.Count(); i++)
                 {
-                    speed = random.Next(1, 9);
-                    direction = random.Next(1, 4);
-                    speeds.Add(speed);
-                    directions.Add(direction);
+                        speed = random.Next(1, 9);
+                        direction = random.Next(1, 5);
+                        speeds.Add(speed);
+                        directions.Add(direction);
+
+                        if (directions[i] == lastdirections[i])
+                        {
+                            direction = random.Next(1, 4);
+                        }
+                        else
+                        {
+
+                        }
+                }
+
+                lastdirections.Clear();
+
+                for (int i = 0; i < oni.Count(); i++)
+                {
+                    lastdirections.Add(directions[i]);
                 }
                 
             }
@@ -164,17 +182,6 @@ namespace Back_Door_Adventures
                 for (int i = 0; i < oni.Count(); i++)
                 {
                     oni[i].Move(speeds[i], directions[i], form);
-                    Rectangle oniRec = new Rectangle(oni[i].x, oni[i].y, oni[i].size, oni[i].size);
-
-                    for (int i2 = oni.Count() - 1; i2 > -1; i2--)
-                    {
-                        Rectangle oRec = new Rectangle(oni[i2].x, oni[i2].y, oni[i2].size, oni[i2].size);
-                        if (oRec.IntersectsWith(oniRec))
-                        {
-                            speeds[i2] *= -1;
-                            speeds[i] *= -1;
-                        }
-                    }
                 }
             }
             

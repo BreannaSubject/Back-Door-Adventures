@@ -19,7 +19,7 @@ namespace Back_Door_Adventures
 
         public void Move(int speed, int direction, Form f)
         {
-            if (direction == 1 && x > 0 + size)
+            if (direction == 1 && x > 0 + size/10)
             {
                 x -= speed;
             }
@@ -27,7 +27,7 @@ namespace Back_Door_Adventures
             {
                 x += speed;
             }
-            else if (direction == 3 && y > 0 + size)
+            else if (direction == 3 && y > 0 + size/10)
             {
                 y -= speed;
             }
@@ -35,10 +35,8 @@ namespace Back_Door_Adventures
             {
                 y += speed;
             }
-            else
-            {
-                
-            }
+            Console.WriteLine(direction);
+            Console.WriteLine(y + "y");
         }
     }
 }
