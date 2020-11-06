@@ -78,14 +78,17 @@ namespace Back_Door_Adventures
 
         private void playAgainButton_Click(object sender, EventArgs e)
         {
+            Form f = FindForm();
             Form1.lives = 3;
+            score = 0;
             PlayScreen ps = new PlayScreen();
             this.Controls.Add(ps);
+            f.Controls.Remove(this);
             playAgainButton.Visible = false;
             exitButton.Visible = false;
             scoreLabel.Visible = false;
             yourScoreLabel.Visible = false;
-            score = 0;
+
         }
 
         private void exitButton_Click(object sender, EventArgs e)

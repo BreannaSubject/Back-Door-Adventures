@@ -31,7 +31,6 @@ namespace Back_Door_Adventures
         Image normalScreen = Properties.Resources.Back_Door_Screen;
         Image oniImage = Properties.Resources.Oni;
         string image = "nonInvert";
-        public static bool flip = false;
         public HardLevel()
         {
             InitializeComponent();
@@ -43,8 +42,9 @@ namespace Back_Door_Adventures
             Form1.rightArrowDown = false;
             Form1.upArrowDown = false;
             Form1.downArrowDown = false;
+            Form1.oneLife = true;
 
-            chan = new Hero(Form1.heroStart, this.Height / 2, heroSpeed, heroSpeed, heroSize, "right");
+           chan = new Hero(Form1.heroStart, this.Height / 2, heroSpeed, heroSpeed, heroSize, "right");
             key = new Rectangle(this.Width - heroSize, this.Height / 2, Form1.keySize, Form1.keySize);
 
             int x1, x2, x3, x4, x5, y1, y2, y3, y4, y5;
@@ -125,6 +125,8 @@ namespace Back_Door_Adventures
         {
             tick++;
             Form form = this.FindForm();
+            Rectangle chanRec = new Rectangle(chan.x, chan.y, chan.size, chan.size);
+
             if (tick % 50 == 0)
             {
                 speeds.Clear();
@@ -185,7 +187,22 @@ namespace Back_Door_Adventures
                 }
             }
             
+            foreach (Oni o in oni)
+            {
+                Rectangle oniRec = new Rectangle(o.x, o.y, o.size, o.size);
 
+                if (chanRec.IntersectsWith(oniRec))
+                {
+                    Form1.lives = 0;
+                    Form1.win = false;
+                    gameTimerLoop.Enabled = false;
+                    healthBox.Visible = false;
+                    GameOverScreen go = new GameOverScreen();
+                    form.Close();
+                    this.Controls.Add(go);
+
+                }
+            }
 
             if (Form1.leftArrowDown == true && chan.x < this.Width - chan.size)
             {
@@ -206,6 +223,16 @@ namespace Back_Door_Adventures
             {
                 chan.Move("up");
                 chan.direction = "up";
+            }
+
+            if (chanRec.IntersectsWith(key))
+            {
+                Form1.stopTime = DateTime.Now;
+                Form1.win = true;
+                gameTimerLoop.Enabled = false;
+                healthBox.Visible = false;
+                GameOverScreen go = new GameOverScreen();
+                this.Controls.Add(go);
             }
 
             Refresh();

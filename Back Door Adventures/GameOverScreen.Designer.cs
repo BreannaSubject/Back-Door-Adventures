@@ -96,6 +96,7 @@
             this.Controls.Add(this.scoreLabel);
             this.Controls.Add(this.exitButton);
             this.Controls.Add(this.playAgainButton);
+            this.DoubleBuffered = true;
             this.Name = "GameOverScreen";
             this.Size = new System.Drawing.Size(700, 400);
             this.Load += new System.EventHandler(this.GameOverScreen_Load);
