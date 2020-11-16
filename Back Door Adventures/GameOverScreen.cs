@@ -17,6 +17,7 @@ namespace Back_Door_Adventures
         List<string> skz = new List<string>() {"Chan","Minho", "Changbin","Hyunjin","Jisung","Felix","Seungmin","Jeongin"};
         Random random = new Random();
         int score = 0;
+        string highScoreName;
         public GameOverScreen()
         {
             InitializeComponent();
@@ -61,6 +62,19 @@ namespace Back_Door_Adventures
                 score += 100;
             }
 
+            if (Form1.easyLevel == true)
+            {
+                score += 100;
+            }
+            else if (Form1.mediumLevel == true)
+            {
+                score += 200;
+            }
+            else if (Form1.hardLevel == true)
+            {
+                score += 300;
+            }
+
             
 
             int name = random.Next(0, 8);
@@ -70,6 +84,7 @@ namespace Back_Door_Adventures
             {
                 if (name == i)
                 {
+                    highScoreName = skz[i] + number;
                     scoreLabel.Text = skz[i] + number + " : " + score;
                 }
             }
@@ -107,6 +122,21 @@ namespace Back_Door_Adventures
         {
             playAgainButton.BackgroundImage = Properties.Resources.Button_Background;
             exitButton.BackgroundImage = Properties.Resources.Button_Background_Inverted;
+        }
+
+        public void Write()
+        {
+            
+            XmlWriter writer = XmlWriter.Create("HighScore.xml", null);
+
+            writer.WriteStartElement("highscore");
+
+            writer.WriteElementString("name", highScoreName);
+            writer.WriteElementString("score", Convert.ToString(score));
+
+            writer.WriteEndElement();
+
+            writer.Close();
         }
 
         

@@ -228,6 +228,7 @@ namespace Back_Door_Adventures
             {
                 Form1.stopTime = DateTime.Now;
                 Form1.win = true;
+                Form1.hardLevel = true;
                 gameTimerLoop.Enabled = false;
                 healthBox.Visible = false;
                 GameOverScreen go = new GameOverScreen();
