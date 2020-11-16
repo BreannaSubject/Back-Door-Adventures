@@ -20,6 +20,7 @@ namespace Back_Door_Adventures
         private void returnButton_Click(object sender, EventArgs e)
         {
             returnButton.Visible = false;
+            label1.Visible = false;
             MenuScreen ms = new MenuScreen();
             this.Controls.Add(ms);
         }
