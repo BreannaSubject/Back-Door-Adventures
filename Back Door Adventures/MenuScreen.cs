@@ -20,24 +20,7 @@ namespace Back_Door_Adventures
 
         private void MenuScreen_Load(object sender, EventArgs e)
         {
-            XmlReader reader = XmlReader.Create("HighScore.xml");
-
-            while (reader.Read())
-            {
-                if (reader.NodeType == XmlNodeType.Text)
-                {
-                    string name = reader.ReadString();
-
-                    reader.ReadToNextSibling("score");
-                    int score = Convert.ToInt32(reader.ReadString());
-
-                    Form1.scores.Add(score);
-                    Form1.names.Add(name);
-
-                }
-            }
-
-            reader.Close();
+            
         } 
         private void playButton_Click(object sender, EventArgs e)
         {

@@ -85,8 +85,8 @@ namespace Back_Door_Adventures
                 if (name == i)
                 {
                     highScoreName = skz[i] + number;
-                    Form1.names.Add(highScoreName);
-                    Form1.scores.Add(score);
+                    Score highscore = new Score(score, highScoreName);
+                    Form1.highscores.Add(highscore);
                     scoreLabel.Text = skz[i] + number + " : " + score;
                 }
             }
@@ -135,12 +135,12 @@ namespace Back_Door_Adventures
 
             writer.WriteStartElement("highscores");
 
-            for (int i = 0; i < Form1.scores.Count(); i++)
+            for (int i = 0; i < Form1.highscores.Count(); i++)
             {
                 writer.WriteStartElement("highscore");
 
-                writer.WriteElementString("name", Form1.names[i]);
-                writer.WriteElementString("score", Convert.ToString(Form1.scores[i]));
+                writer.WriteElementString("name", Form1.highscores[i].name);
+                writer.WriteElementString("score", Convert.ToString(Form1.highscores[i].score));
 
                 writer.WriteEndElement();
 

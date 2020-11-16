@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Diagnostics;
+using System.Xml;
 
 namespace Back_Door_Adventures
 {
@@ -21,8 +22,7 @@ namespace Back_Door_Adventures
         public static int lives = 3;
         public static DateTime startTime;
         public static DateTime stopTime;
-        public static List<int> scores = new List<int>();
-        public static List<string> names = new List<string>();
+        public static List<Score> highscores = new List<Score>();
         public Form1()
         {
             InitializeComponent();
@@ -30,6 +30,25 @@ namespace Back_Door_Adventures
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            XmlReader reader = XmlReader.Create("HighScore.xml");
+
+            while (reader.Read())
+            {
+                if (reader.NodeType == XmlNodeType.Text)
+                {
+                    string name = reader.ReadString();
+
+                    reader.ReadToNextSibling("score");
+                    int score = Convert.ToInt32(reader.ReadString());
+
+                    Score score1 = new Score(score, name);
+                    highscores.Add(score1);
+
+
+                }
+            }
+
+            reader.Close();
             MenuScreen ms = new MenuScreen();
             this.Controls.Add(ms);
         }
