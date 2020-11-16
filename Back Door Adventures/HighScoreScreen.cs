@@ -19,6 +19,12 @@ namespace Back_Door_Adventures
         }
         private void HighScoreScreen_Load(object sender, EventArgs e)
         {
+            foreach (Score s in Form1.highscores)
+            {
+                Form1.highscores = Form1.highscores.OrderByDescending(x => x.score).ToList();
+            }
+            
+
             outputLabel2.Text = "";
 
             for (int i = 0; i < Form1.highscores.Count(); i++)
