@@ -12,17 +12,25 @@ namespace Back_Door_Adventures
 {
     public partial class HardLevel : UserControl
     {
-        Hero chan;
+        
         Rectangle key;
+
+        // oni lists and variables
         List<Oni> oni = new List<Oni>();
         List<int> speeds = new List<int>();
         List<int> directions = new List<int>();
         List<int> lastdirections = new List<int>();
         int oniSize = 50;
+
+        //hero variables
+        Hero chan;
         int heroSpeed = 4;
         int heroSize = 36;
+
         Random random = new Random();
         int tick, speed, direction;
+
+        //images for the inversion
         Image invertOni = Properties.Resources.Inverted_Oni;
         Image invertHealthBar = Properties.Resources.Health_Bar_Full_Green_Inverted;
         Image invertScreen = Properties.Resources.Back_Door_Screen_Inverted;
@@ -47,6 +55,7 @@ namespace Back_Door_Adventures
            chan = new Hero(Form1.heroStart, this.Height / 2, heroSpeed, heroSpeed, heroSize, "right");
             key = new Rectangle(this.Width - heroSize, this.Height / 2, Form1.keySize, Form1.keySize);
 
+            //randomly choses the x and y of each Oni and loads them
             int x1, x2, x3, x4, x5, y1, y2, y3, y4, y5;
             x1 = random.Next(130, 551);
             x2 = random.Next(130, 551);
@@ -73,6 +82,7 @@ namespace Back_Door_Adventures
 
             for (int i = 0; i < oni.Count(); i++)
             {
+                //randomizes the speed and direction
                 speed = random.Next(1, 9);
                 direction = random.Next(1, 4);
                 speeds.Add(speed);
@@ -129,6 +139,7 @@ namespace Back_Door_Adventures
 
             if (tick % 50 == 0)
             {
+                //changes the speed and direction of the Onis every 50 ticks
                 speeds.Clear();
                 directions.Clear();
 
@@ -160,6 +171,7 @@ namespace Back_Door_Adventures
 
             if (tick == 100)
             {
+                //inverts all the elements on the screen except the hero
                 if (image == "nonInvert")
                 {
                     this.BackgroundImage = invertScreen;
@@ -180,7 +192,7 @@ namespace Back_Door_Adventures
             }
 
             if (oni.Count() > 0)
-            {
+            {//moves the onis
                 for (int i = 0; i < oni.Count(); i++)
                 {
                     oni[i].Move(speeds[i], directions[i], form);
@@ -188,11 +200,12 @@ namespace Back_Door_Adventures
             }
             
             foreach (Oni o in oni)
-            {
+            {//checks to see if the onis have intersected with the hero
                 Rectangle oniRec = new Rectangle(o.x, o.y, o.size, o.size);
 
                 if (chanRec.IntersectsWith(oniRec))
                 {
+                    //exits the level and goes to the game over screen
                     Form1.lives = 0;
                     Form1.win = false;
                     gameTimerLoop.Enabled = false;
@@ -202,6 +215,7 @@ namespace Back_Door_Adventures
 
                 }
             }
+            //moving the character
 
             if (Form1.leftArrowDown == true && chan.x < this.Width - chan.size)
             {
@@ -226,6 +240,7 @@ namespace Back_Door_Adventures
 
             if (chanRec.IntersectsWith(key))
             {
+                //exits the level and goes to the game over screen
                 Form1.stopTime = DateTime.Now;
                 Form1.win = true;
                 Form1.hardLevel = true;
@@ -240,6 +255,7 @@ namespace Back_Door_Adventures
 
         private void HardLevel_Paint(object sender, PaintEventArgs e)
         {
+            //draws everthing to the screen
             e.Graphics.DrawImage(Properties.Resources.Clé, key);
 
             if (chan.direction == "right")

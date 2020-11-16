@@ -14,15 +14,19 @@ namespace Back_Door_Adventures
 {
     public partial class EasyLevel : UserControl
     {
-        List<Car> cars = new List<Car>();
+        List<Car> cars = new List<Car>(); //list for all the cars
+        //car variables
         int carSpeed = 1;
         int carSize = 20;
+
+        //hero variables
+        Hero minho;
         int heroSpeed = 5;
         int heroSize = 36;
+
         string direction;
         Random random = new Random();
         int tick = 0;
-        Hero minho;
         Rectangle key;
         public EasyLevel()
         {
@@ -196,7 +200,7 @@ namespace Back_Door_Adventures
             Rectangle minhoRec = new Rectangle(minho.x, minho.y, minho.size, minho.size);
 
             foreach (Car c in cars)
-            {
+            {//checks if the hero intersects with the cars 
                 Rectangle carRec = new Rectangle(c.x, c.y, c.size, c.size);
 
                 if (carRec.IntersectsWith(minhoRec))
@@ -207,6 +211,7 @@ namespace Back_Door_Adventures
                 }
             }
 
+            //changes the picture in the health box based on the lives
             if (Form1.lives == 3)
             {
                 healthBox.BackgroundImage = Properties.Resources.Health_Bar_Full;
@@ -221,6 +226,7 @@ namespace Back_Door_Adventures
             }
             else if (Form1.lives == 0)
             {
+                //exits the level and goes to the game over screen
                 Form1.stopTime = DateTime.Now;
                 Form1.win = false;
                 gameLoopTimer.Enabled = false;
@@ -231,6 +237,7 @@ namespace Back_Door_Adventures
 
             if (minhoRec.IntersectsWith(key))
             {
+                //exits the level and goes to the game over screen
                 Form1.stopTime = DateTime.Now;
                 Form1.win = true;
                 Form1.easyLevel = true;
@@ -245,11 +252,12 @@ namespace Back_Door_Adventures
 
         private void gameLoopTimer_Tick(object sender, EventArgs e)
         {
-            Form1.startTime = DateTime.Now;
+            Form1.startTime = DateTime.Now;//captures the start time
             tick +=  2;
 
             if (tick == 200)
             {
+                //makes cars every 200 ticks
                 MakeBottomCars();
                 MakeTopCars();
                 tick = 0;
@@ -257,6 +265,7 @@ namespace Back_Door_Adventures
 
             foreach (Car c in cars)
             {
+                //moves the cars
                 if (c.direction == "up")
                 {
                     c.UpMove(carSpeed);
@@ -269,12 +278,14 @@ namespace Back_Door_Adventures
 
             for (int i = 0; i < cars.Count(); i++)
             {
+                //removes the cars from the list when they reach the edge of the screen
                 if (cars[i].y > 400 || cars[i].y < 0)
                 {
                     cars.RemoveAt(i);
                 }
             }
 
+            //moves the hero
             if (Form1.leftArrowDown == true && minho.x < this.Width - minho.size)
             {
                 minho.Move("left");
@@ -303,6 +314,7 @@ namespace Back_Door_Adventures
 
         private void EasyLevel_Paint(object sender, PaintEventArgs e)
         {
+            //draws to the screen
             e.Graphics.DrawImage(Properties.Resources.Clé, key);
 
             if (minho.direction == "right")

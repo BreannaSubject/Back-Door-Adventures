@@ -22,20 +22,23 @@ namespace Back_Door_Adventures
             foreach (Score s in Form1.highscores)
             {
                 Form1.highscores = Form1.highscores.OrderByDescending(x => x.score).ToList();
+                //Sorting highscores
             }
             
 
-            outputLabel2.Text = "";
+            outputLabel2.Text = ""; // making sure the label is clear
 
             for (int i = 0; i < Form1.highscores.Count(); i++)
             {
                 outputLabel2.Text += Convert.ToString(i+1) + "  " + Form1.highscores[i].name + "   " + Form1.highscores[i].score + "\n";
+                // printing to the label
             }
             
         }
 
         private void returnButton_Click(object sender, EventArgs e)
-        {
+        {   
+            // returns to the menu screen
             outputLabel2.Text = "";
             returnButton.Visible = false;
             MenuScreen ms = new MenuScreen();
@@ -45,6 +48,7 @@ namespace Back_Door_Adventures
 
         private void returnButton_Enter(object sender, EventArgs e)
         {
+            //changes the button background when over it
             returnButton.BackgroundImage = Properties.Resources.Button_Background_Inverted;
         }
 

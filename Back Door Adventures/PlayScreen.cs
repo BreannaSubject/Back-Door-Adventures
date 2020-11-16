@@ -23,6 +23,7 @@ namespace Back_Door_Adventures
 
         private void easyButton_Click(object sender, EventArgs e)
         {
+            //takes you to the easy level
             easyButton.Visible = false;
             mediumButton.Visible = false;
             hardButton.Visible = false;
@@ -33,6 +34,7 @@ namespace Back_Door_Adventures
 
         private void mediumButton_Click(object sender, EventArgs e)
         {
+            //takes you to the medium level
             easyButton.Visible = false;
             mediumButton.Visible = false;
             hardButton.Visible = false;
@@ -43,6 +45,7 @@ namespace Back_Door_Adventures
 
         private void hardButton_Click(object sender, EventArgs e)
         {
+            //takes you to the hard level
             easyButton.Visible = false;
             mediumButton.Visible = false;
             hardButton.Visible = false;
@@ -53,6 +56,7 @@ namespace Back_Door_Adventures
 
         private void exitButton_Click(object sender, EventArgs e)
         {
+            //exits the form
             Application.Exit();
         }
 

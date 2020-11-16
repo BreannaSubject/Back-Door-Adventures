@@ -28,6 +28,7 @@ namespace Back_Door_Adventures
             Form1.oneLife = false;
             int time = (Form1.stopTime - Form1.startTime).Milliseconds;
 
+            // calculates the score based on time, number of lives, and the level
             if (Form1.win == true)
             {
                 score += 500;
@@ -39,7 +40,7 @@ namespace Back_Door_Adventures
                 {
                     score += 500;
                 }
-                else
+                else if (time < 15000)
                 {
                     score += 1000;
                 }
@@ -80,6 +81,7 @@ namespace Back_Door_Adventures
             int name = random.Next(0, 8);
             int number = random.Next(1, 100);
 
+            // creates a name to save to the XML file
             for (int i = 0; i < skz.Count(); i++)
             {
                 if (name == i)
@@ -96,7 +98,7 @@ namespace Back_Door_Adventures
 
         private void playAgainButton_Click(object sender, EventArgs e)
         {
-            //Form f = FindForm();
+            // takes you back to the playscreen
             Form1.lives = 3;
             score = 0;
             PlayScreen ps = new PlayScreen();
@@ -111,6 +113,7 @@ namespace Back_Door_Adventures
 
         private void exitButton_Click(object sender, EventArgs e)
         {
+            //exits the application
             Write();
             score = 0;
             Application.Exit();
@@ -130,7 +133,7 @@ namespace Back_Door_Adventures
 
         public void Write()
         {
-            
+            // writes the new score to the XML file
             XmlWriter writer = XmlWriter.Create("HighScore.xml", null);
 
             writer.WriteStartElement("highscores");

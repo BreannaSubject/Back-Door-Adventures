@@ -24,6 +24,7 @@ namespace Back_Door_Adventures
         } 
         private void playButton_Click(object sender, EventArgs e)
         {
+            // takes you to the play screen
             playButton.Visible = false;
             controlButton.Visible = false;
             highScoreButton.Visible = false;
@@ -34,6 +35,7 @@ namespace Back_Door_Adventures
 
         private void controlButton_Click(object sender, EventArgs e)
         {
+            // takes you to the control screen
             playButton.Visible = false;
             controlButton.Visible = false;
             highScoreButton.Visible = false;
@@ -44,6 +46,7 @@ namespace Back_Door_Adventures
 
         private void highScoreButton_Click(object sender, EventArgs e)
         {
+            //takes you to the highscore screen
             playButton.Visible = false;
             controlButton.Visible = false;
             highScoreButton.Visible = false;
@@ -54,6 +57,7 @@ namespace Back_Door_Adventures
 
         private void exitButton_Click(object sender, EventArgs e)
         {
+            //exits the form
             Application.Exit();
         }
 

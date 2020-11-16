@@ -13,14 +13,17 @@ namespace Back_Door_Adventures
 {
     public partial class MediumLevel : UserControl
     {
-        Hero hyunjin;
+        Hero hyunjin; 
         Rectangle key;
+
+        //hero variables
         int heroSpeed = 4;
         int heroSize = 36;
         int skullSpeed = 6;
         int skullSize = 32;
-        int tick = 0;
-        bool skullDirection;
+
+        int tick = 0; //tick for event timers
+        bool skullDirection; 
         Random random = new Random();
         List<Skull> downSkulls = new List<Skull>();
         List<Skull> leftSkulls = new List<Skull>();
@@ -34,6 +37,7 @@ namespace Back_Door_Adventures
 
         private void MediumLevel_Load(object sender, EventArgs e)
         {
+            //initializes variables and creates a rectangle for the key and a hero
             lightBox.BackgroundImage = blueLight;
 
             Form1.leftArrowDown = false;
@@ -43,6 +47,8 @@ namespace Back_Door_Adventures
 
             hyunjin = new Hero(Form1.heroStart, this.Height / 2, heroSpeed, heroSpeed, heroSize, "right");
             key = new Rectangle(this.Width - heroSize, this.Height / 2, Form1.keySize, Form1.keySize);
+
+            //reads the XML file for the starting positions of the skulls
             XmlReader reader = XmlReader.Create("MediumLevel.xml");
 
             while (reader.Read())
@@ -72,10 +78,13 @@ namespace Back_Door_Adventures
                 }
             }
             reader.Close();
+
+            Form1.startTime = DateTime.Now; //captures the start time
         }
 
         public void MakeDownSkulls()
         {
+            // creates skulls that go down the screen
             skullDirection = false;
             int x1 = random.Next(50, 280);
             int x2 = random.Next(314, 629);
@@ -89,6 +98,7 @@ namespace Back_Door_Adventures
 
         public void MakeLeftSkulls()
         {
+            // creates skulls that go to the left
             skullDirection = true;
             int x = 650;
             int y1 = random.Next(45, 200);
@@ -103,6 +113,7 @@ namespace Back_Door_Adventures
 
         public void SkullIntersection()
         {
+            // creates an explosion if two skulls intersect and changes the light colour
             if (leftSkulls.Count() >= 1 && downSkulls.Count() >= 1)
             {
                 for (int i1 = 0; i1 < leftSkulls.Count; i1++)
@@ -146,6 +157,7 @@ namespace Back_Door_Adventures
 
         public void ExplosionIntersection ()
         {
+            //makes it so that the player only has one life if they intersect with an explosion
             Rectangle hyunjinRec = new Rectangle(hyunjin.x, hyunjin.y, hyunjin.size, hyunjin.size);
 
             foreach (Rectangle ex in explosions)
@@ -166,6 +178,7 @@ namespace Back_Door_Adventures
 
             foreach (Skull s in leftSkulls)
             {
+                //checks for intersections with the left skulls
                 Rectangle skullRec = new Rectangle(s.x, s.y, s.size, s.size);
 
                 if (skullRec.IntersectsWith(hyunjinRec))
@@ -175,6 +188,7 @@ namespace Back_Door_Adventures
 
                     if (Form1.oneLife == true)
                     {
+                        //exits the level and goes to the game over screen
                         Form1.stopTime = DateTime.Now;
                         Form1.win = false;
                         gameLoopTimer.Enabled = false;
@@ -192,6 +206,7 @@ namespace Back_Door_Adventures
 
             foreach (Skull s in downSkulls)
             {
+                //checks for intersections with the down skulls
                 Rectangle skullRec = new Rectangle(s.x, s.y, s.size, s.size);
 
                 if (skullRec.IntersectsWith(hyunjinRec))
@@ -201,6 +216,7 @@ namespace Back_Door_Adventures
 
                     if (Form1.oneLife == true)
                     {
+                        //exits the level and goes to the game over screen
                         Form1.stopTime = DateTime.Now;
                         Form1.win = false;
                         gameLoopTimer.Enabled = false;
@@ -217,6 +233,7 @@ namespace Back_Door_Adventures
                 }
             }
 
+            //changes the life counter 
             if (Form1.lives == 3 && Form1.oneLife == false)
             {
                 healthBox.BackgroundImage = Properties.Resources.Health_Bar_Full;
@@ -243,6 +260,7 @@ namespace Back_Door_Adventures
             }
             else if (Form1.lives == 0 )
             {
+                //exits the level and goes to the game over screen
                 Form1.stopTime = DateTime.Now;
                 Form1.win = false;
                 gameLoopTimer.Enabled = false;
@@ -254,6 +272,7 @@ namespace Back_Door_Adventures
 
             if (hyunjinRec.IntersectsWith(key))
             {
+                //exits the level and goes to the game over screen
                 Form1.stopTime = DateTime.Now;
                 Form1.win = true;
                 Form1.mediumLevel = true;
@@ -269,7 +288,7 @@ namespace Back_Door_Adventures
 
         private void gameLoopTimer_Tick(object sender, EventArgs e)
         {
-            Form1.startTime = DateTime.Now;
+            
             tick ++;
 
             if (tick == 100)
@@ -376,6 +395,7 @@ namespace Back_Door_Adventures
 
         private void MediumLevel_Paint(object sender, PaintEventArgs e)
         {
+            //draws all the images to the screen
             e.Graphics.DrawImage(Properties.Resources.Clé, key);
 
             if (hyunjin.direction == "right")
