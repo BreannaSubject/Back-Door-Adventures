@@ -441,6 +441,46 @@ namespace Back_Door_Adventures.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Hyunjin_Back {
+            get {
+                object obj = ResourceManager.GetObject("Hyunjin_Back", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Hyunjin_Forward {
+            get {
+                object obj = ResourceManager.GetObject("Hyunjin_Forward", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Hyunjin_Left {
+            get {
+                object obj = ResourceManager.GetObject("Hyunjin_Left", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Hyunjin_Right {
+            get {
+                object obj = ResourceManager.GetObject("Hyunjin_Right", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Inverted_Oni {
             get {
                 object obj = ResourceManager.GetObject("Inverted_Oni", resourceCulture);
@@ -493,6 +533,46 @@ namespace Back_Door_Adventures.Properties {
         internal static System.Drawing.Bitmap Menu_Screen {
             get {
                 object obj = ResourceManager.GetObject("Menu_Screen", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Minho_Back {
+            get {
+                object obj = ResourceManager.GetObject("Minho_Back", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Minho_Foreward {
+            get {
+                object obj = ResourceManager.GetObject("Minho_Foreward", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Minho_Left {
+            get {
+                object obj = ResourceManager.GetObject("Minho_Left", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Minho_Right {
+            get {
+                object obj = ResourceManager.GetObject("Minho_Right", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

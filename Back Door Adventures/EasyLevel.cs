@@ -22,7 +22,7 @@ namespace Back_Door_Adventures
         string direction;
         Random random = new Random();
         int tick = 0;
-        Hero chan;
+        Hero minho;
         Rectangle key;
         public EasyLevel()
         {
@@ -36,7 +36,7 @@ namespace Back_Door_Adventures
             Form1.upArrowDown = false;
             Form1.downArrowDown = false;
 
-            chan = new Hero(Form1.heroStart, this.Height / 2, heroSpeed, heroSpeed, heroSize, "right");
+            minho = new Hero(Form1.heroStart, this.Height / 2, heroSpeed, heroSpeed, heroSize, "right");
             key = new Rectangle(this.Width - heroSize, this.Height / 2, Form1.keySize, Form1.keySize);
             XmlReader reader = XmlReader.Create("EasyLevel.xml");
 
@@ -193,16 +193,16 @@ namespace Back_Door_Adventures
 
         public void Intersection()
         {
-            Rectangle chanRec = new Rectangle(chan.x, chan.y, chan.size, chan.size);
+            Rectangle minhoRec = new Rectangle(minho.x, minho.y, minho.size, minho.size);
 
             foreach (Car c in cars)
             {
                 Rectangle carRec = new Rectangle(c.x, c.y, c.size, c.size);
 
-                if (carRec.IntersectsWith(chanRec))
+                if (carRec.IntersectsWith(minhoRec))
                 {
-                    chan.x = Form1.heroStart;
-                    chan.y = this.Height / 2;
+                    minho.x = Form1.heroStart;
+                    minho.y = this.Height / 2;
                     Form1.lives--;
                 }
             }
@@ -229,7 +229,7 @@ namespace Back_Door_Adventures
                 this.Controls.Add(go);
             }
 
-            if (chanRec.IntersectsWith(key))
+            if (minhoRec.IntersectsWith(key))
             {
                 Form1.stopTime = DateTime.Now;
                 Form1.win = true;
@@ -275,25 +275,25 @@ namespace Back_Door_Adventures
                 }
             }
 
-            if (Form1.leftArrowDown == true && chan.x < this.Width - chan.size)
+            if (Form1.leftArrowDown == true && minho.x < this.Width - minho.size)
             {
-                chan.Move("left");
-                chan.direction = "left";
+                minho.Move("left");
+                minho.direction = "left";
             }
-            else if (Form1.rightArrowDown == true && chan.x > 0)
+            else if (Form1.rightArrowDown == true && minho.x > 0)
             {
-                chan.Move("right");
-                chan.direction = "right";
+                minho.Move("right");
+                minho.direction = "right";
             }
-            else if (Form1.downArrowDown == true && chan.y < this.Height - chan.size*2)
+            else if (Form1.downArrowDown == true && minho.y < this.Height - minho.size*2)
             {
-                chan.Move("down");
-                chan.direction = "down";
+                minho.Move("down");
+                minho.direction = "down";
             }
-            else if (Form1.upArrowDown == true && chan.y > 0)
+            else if (Form1.upArrowDown == true && minho.y > 0)
             {
-                chan.Move("up");
-                chan.direction = "up";
+                minho.Move("up");
+                minho.direction = "up";
             }
 
             Intersection();
@@ -305,21 +305,21 @@ namespace Back_Door_Adventures
         {
             e.Graphics.DrawImage(Properties.Resources.Clé, key);
 
-            if (chan.direction == "right")
+            if (minho.direction == "right")
             {
-                e.Graphics.DrawImage(Properties.Resources.Chan_Right, chan.x, chan.y, chan.size, chan.size);
+                e.Graphics.DrawImage(Properties.Resources.Minho_Right, minho.x, minho.y, minho.size, minho.size);
             }
-            else if (chan.direction == "left")
+            else if (minho.direction == "left")
             {
-                e.Graphics.DrawImage(Properties.Resources.Chan_Left, chan.x, chan.y, chan.size, chan.size);
+                e.Graphics.DrawImage(Properties.Resources.Minho_Left, minho.x, minho.y, minho.size, minho.size);
             }
-            else if (chan.direction == "up")
+            else if (minho.direction == "up")
             {
-                e.Graphics.DrawImage(Properties.Resources.Chan_Back, chan.x, chan.y, chan.size, chan.size);
+                e.Graphics.DrawImage(Properties.Resources.Minho_Back, minho.x, minho.y, minho.size, minho.size);
             }
-            else if (chan.direction == "down")
+            else if (minho.direction == "down")
             {
-                e.Graphics.DrawImage(Properties.Resources.Chan_Forward, chan.x, chan.y, chan.size, chan.size);
+                e.Graphics.DrawImage(Properties.Resources.Minho_Foreward, minho.x, minho.y, minho.size, minho.size);
             }
 
             foreach (Car c in cars)

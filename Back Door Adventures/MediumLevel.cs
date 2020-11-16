@@ -13,7 +13,7 @@ namespace Back_Door_Adventures
 {
     public partial class MediumLevel : UserControl
     {
-        Hero chan;
+        Hero hyunjin;
         Rectangle key;
         int heroSpeed = 4;
         int heroSize = 36;
@@ -41,7 +41,7 @@ namespace Back_Door_Adventures
             Form1.upArrowDown = false;
             Form1.downArrowDown = false;
 
-            chan = new Hero(Form1.heroStart, this.Height / 2, heroSpeed, heroSpeed, heroSize, "right");
+            hyunjin = new Hero(Form1.heroStart, this.Height / 2, heroSpeed, heroSpeed, heroSize, "right");
             key = new Rectangle(this.Width - heroSize, this.Height / 2, Form1.keySize, Form1.keySize);
             XmlReader reader = XmlReader.Create("MediumLevel.xml");
 
@@ -146,15 +146,15 @@ namespace Back_Door_Adventures
 
         public void ExplosionIntersection ()
         {
-            Rectangle chanRec = new Rectangle(chan.x, chan.y, chan.size, chan.size);
+            Rectangle hyunjinRec = new Rectangle(hyunjin.x, hyunjin.y, hyunjin.size, hyunjin.size);
 
             foreach (Rectangle ex in explosions)
             {
-                if (ex.IntersectsWith(chanRec))
+                if (ex.IntersectsWith(hyunjinRec))
                 {
                     Form1.oneLife = true;
-                    chan.x = Form1.heroStart;
-                    chan.y = this.Height / 2;
+                    hyunjin.x = Form1.heroStart;
+                    hyunjin.y = this.Height / 2;
                     
                 }
             }
@@ -162,16 +162,16 @@ namespace Back_Door_Adventures
 
         public void Intersection()
         {
-            Rectangle chanRec = new Rectangle(chan.x, chan.y, chan.size, chan.size);
+            Rectangle hyunjinRec = new Rectangle(hyunjin.x, hyunjin.y, hyunjin.size, hyunjin.size);
 
             foreach (Skull s in leftSkulls)
             {
                 Rectangle skullRec = new Rectangle(s.x, s.y, s.size, s.size);
 
-                if (skullRec.IntersectsWith(chanRec))
+                if (skullRec.IntersectsWith(hyunjinRec))
                 {
-                    chan.x = Form1.heroStart;
-                    chan.y = this.Height / 2;
+                    hyunjin.x = Form1.heroStart;
+                    hyunjin.y = this.Height / 2;
 
                     if (Form1.oneLife == true)
                     {
@@ -194,10 +194,10 @@ namespace Back_Door_Adventures
             {
                 Rectangle skullRec = new Rectangle(s.x, s.y, s.size, s.size);
 
-                if (skullRec.IntersectsWith(chanRec))
+                if (skullRec.IntersectsWith(hyunjinRec))
                 {
-                    chan.x = Form1.heroStart;
-                    chan.y = this.Height / 2;
+                    hyunjin.x = Form1.heroStart;
+                    hyunjin.y = this.Height / 2;
 
                     if (Form1.oneLife == true)
                     {
@@ -252,7 +252,7 @@ namespace Back_Door_Adventures
                 this.Controls.Add(go);
             }
 
-            if (chanRec.IntersectsWith(key))
+            if (hyunjinRec.IntersectsWith(key))
             {
                 Form1.stopTime = DateTime.Now;
                 Form1.win = true;
@@ -308,25 +308,25 @@ namespace Back_Door_Adventures
                 }
             }
 
-            if (Form1.leftArrowDown == true && chan.x < this.Width - chan.size)
+            if (Form1.leftArrowDown == true && hyunjin.x < this.Width - hyunjin.size)
             {
-                chan.Move("left");
-                chan.direction = "left";
+                hyunjin.Move("left");
+                hyunjin.direction = "left";
             }
-            else if (Form1.rightArrowDown == true && chan.x > 0)
+            else if (Form1.rightArrowDown == true && hyunjin.x > 0)
             {
-                chan.Move("right");
-                chan.direction = "right";
+                hyunjin.Move("right");
+                hyunjin.direction = "right";
             }
-            else if (Form1.downArrowDown == true && chan.y < this.Height - chan.size * 2)
+            else if (Form1.downArrowDown == true && hyunjin.y < this.Height - hyunjin.size * 2)
             {
-                chan.Move("down");
-                chan.direction = "down";
+                hyunjin.Move("down");
+                hyunjin.direction = "down";
             }
-            else if (Form1.upArrowDown == true && chan.y > 0)
+            else if (Form1.upArrowDown == true && hyunjin.y > 0)
             {
-                chan.Move("up");
-                chan.direction = "up";
+                hyunjin.Move("up");
+                hyunjin.direction = "up";
             }
 
             Intersection();
@@ -378,21 +378,21 @@ namespace Back_Door_Adventures
         {
             e.Graphics.DrawImage(Properties.Resources.Clé, key);
 
-            if (chan.direction == "right")
+            if (hyunjin.direction == "right")
             {
-                e.Graphics.DrawImage(Properties.Resources.Chan_Right, chan.x, chan.y, chan.size, chan.size);
+                e.Graphics.DrawImage(Properties.Resources.Hyunjin_Right, hyunjin.x, hyunjin.y, hyunjin.size, hyunjin.size);
             }
-            else if (chan.direction == "left")
+            else if (hyunjin.direction == "left")
             {
-                e.Graphics.DrawImage(Properties.Resources.Chan_Left, chan.x, chan.y, chan.size, chan.size);
+                e.Graphics.DrawImage(Properties.Resources.Hyunjin_Left, hyunjin.x, hyunjin.y, hyunjin.size, hyunjin.size);
             }
-            else if (chan.direction == "up")
+            else if (hyunjin.direction == "up")
             {
-                e.Graphics.DrawImage(Properties.Resources.Chan_Back, chan.x, chan.y, chan.size, chan.size);
+                e.Graphics.DrawImage(Properties.Resources.Hyunjin_Back, hyunjin.x, hyunjin.y, hyunjin.size, hyunjin.size);
             }
-            else if (chan.direction == "down")
+            else if (hyunjin.direction == "down")
             {
-                e.Graphics.DrawImage(Properties.Resources.Chan_Forward, chan.x, chan.y, chan.size, chan.size);
+                e.Graphics.DrawImage(Properties.Resources.Hyunjin_Forward, hyunjin.x, hyunjin.y, hyunjin.size, hyunjin.size);
             }
 
             foreach (Skull s in leftSkulls)

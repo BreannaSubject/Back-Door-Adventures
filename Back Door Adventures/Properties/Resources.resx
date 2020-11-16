@@ -223,6 +223,18 @@
   <data name="High_Score_Screen" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\High Score Screen.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Hyunjin_Back" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Hyunjin Back.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Hyunjin_Forward" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Hyunjin Forward.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Hyunjin_Left" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Hyunjin Left.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Hyunjin_Right" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Hyunjin Right.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Inverted_Oni" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Inverted Oni.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -231,6 +243,18 @@
   </data>
   <data name="Menu_Screen" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Menu Screen.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Minho_Back" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Minho Back.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Minho_Foreward" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Minho Foreward.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Minho_Left" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Minho Left.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Minho_Right" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Minho Right.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Oni" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Oni.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
