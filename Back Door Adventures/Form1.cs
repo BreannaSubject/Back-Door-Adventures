@@ -21,6 +21,8 @@ namespace Back_Door_Adventures
         public static int lives = 3;
         public static DateTime startTime;
         public static DateTime stopTime;
+        public static List<int> scores = new List<int>();
+        public static List<string> names = new List<string>();
         public Form1()
         {
             InitializeComponent();

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml;
 
 namespace Back_Door_Adventures
 {
@@ -17,6 +18,27 @@ namespace Back_Door_Adventures
             InitializeComponent();
         }
 
+        private void MenuScreen_Load(object sender, EventArgs e)
+        {
+            XmlReader reader = XmlReader.Create("HighScore.xml");
+
+            while (reader.Read())
+            {
+                if (reader.NodeType == XmlNodeType.Text)
+                {
+                    string name = reader.ReadString();
+
+                    reader.ReadToNextSibling("score");
+                    int score = Convert.ToInt32(reader.ReadString());
+
+                    Form1.scores.Add(score);
+                    Form1.names.Add(name);
+
+                }
+            }
+
+            reader.Close();
+        } 
         private void playButton_Click(object sender, EventArgs e)
         {
             playButton.Visible = false;
@@ -83,5 +105,7 @@ namespace Back_Door_Adventures
             highScoreButton.BackgroundImage = Properties.Resources.Button_Background;
             exitButton.BackgroundImage = Properties.Resources.Button_Background_Inverted;
         }
+
+        
     }
 }

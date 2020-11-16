@@ -85,9 +85,12 @@ namespace Back_Door_Adventures
                 if (name == i)
                 {
                     highScoreName = skz[i] + number;
+                    Form1.names.Add(highScoreName);
+                    Form1.scores.Add(score);
                     scoreLabel.Text = skz[i] + number + " : " + score;
                 }
             }
+
 
         }
 
@@ -108,6 +111,7 @@ namespace Back_Door_Adventures
 
         private void exitButton_Click(object sender, EventArgs e)
         {
+            Write();
             score = 0;
             Application.Exit();
         }
@@ -129,10 +133,18 @@ namespace Back_Door_Adventures
             
             XmlWriter writer = XmlWriter.Create("HighScore.xml", null);
 
-            writer.WriteStartElement("highscore");
+            writer.WriteStartElement("highscores");
 
-            writer.WriteElementString("name", highScoreName);
-            writer.WriteElementString("score", Convert.ToString(score));
+            for (int i = 0; i < Form1.scores.Count(); i++)
+            {
+                writer.WriteStartElement("highscore");
+
+                writer.WriteElementString("name", Form1.names[i]);
+                writer.WriteElementString("score", Convert.ToString(Form1.scores[i]));
+
+                writer.WriteEndElement();
+
+            }
 
             writer.WriteEndElement();
 
