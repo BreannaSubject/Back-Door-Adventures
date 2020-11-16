@@ -100,6 +100,7 @@
             this.Controls.Add(this.easyButton);
             this.Name = "PlayScreen";
             this.Size = new System.Drawing.Size(700, 400);
+            this.Load += new System.EventHandler(this.PlayScreen_Load);
             this.ResumeLayout(false);
 
         }

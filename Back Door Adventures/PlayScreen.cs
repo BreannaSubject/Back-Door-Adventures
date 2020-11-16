@@ -16,6 +16,10 @@ namespace Back_Door_Adventures
         {
             InitializeComponent();
         }
+        private void PlayScreen_Load(object sender, EventArgs e)
+        {
+            this.BackColor = Color.White;
+        }
 
         private void easyButton_Click(object sender, EventArgs e)
         {
@@ -83,5 +87,7 @@ namespace Back_Door_Adventures
             hardButton.BackgroundImage = Properties.Resources.Back_Door;
             exitButton.BackgroundImage = Properties.Resources.Exit_Door;
         }
+
+       
     }
 }

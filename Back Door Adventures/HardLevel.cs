@@ -198,7 +198,6 @@ namespace Back_Door_Adventures
                     gameTimerLoop.Enabled = false;
                     healthBox.Visible = false;
                     GameOverScreen go = new GameOverScreen();
-                    form.Close();
                     this.Controls.Add(go);
 
                 }
