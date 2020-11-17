@@ -65,7 +65,8 @@ namespace Back_Door_Adventures
             }
             reader.Close();
 
-            Form1.startTime = DateTime.Now;//captures the start time
+            //captures the start time
+            Form1.timer.Start();
 
         }
 
@@ -111,6 +112,7 @@ namespace Back_Door_Adventures
 
         public void MakeBottomCars()
         {
+            //adds cars at the bottom of the screen with random x positions and colours
             int y = this.Height - carSize * 2;
             int randPosition, position, randColour;
             string newDirection, carColour;
@@ -155,6 +157,7 @@ namespace Back_Door_Adventures
 
         public void MakeTopCars()
         {
+            //adds cars at the top of the screen with random x positions and colours
             int y = 0;
             int randPosition, position, randColour;
             string newDirection, carColour;
@@ -229,7 +232,7 @@ namespace Back_Door_Adventures
             else if (Form1.lives == 0)
             {
                 //exits the level and goes to the game over screen
-                Form1.stopTime = DateTime.Now;
+                Form1.timer.Stop();
                 Form1.win = false;
                 gameLoopTimer.Enabled = false;
                 healthBox.Visible = false;
@@ -240,7 +243,8 @@ namespace Back_Door_Adventures
             if (minhoRec.IntersectsWith(key))
             {
                 //exits the level and goes to the game over screen
-                Form1.stopTime = DateTime.Now;
+                //Form1.stopTime = DateTime.Now;
+                Form1.timer.Stop();
                 Form1.win = true;
                 Form1.easyLevel = true;
                 gameLoopTimer.Enabled = false;

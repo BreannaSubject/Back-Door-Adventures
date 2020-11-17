@@ -26,22 +26,23 @@ namespace Back_Door_Adventures
         private void GameOverScreen_Load(object sender, EventArgs e)
         {
             Form1.oneLife = false;
-            int time = (Form1.stopTime - Form1.startTime).Milliseconds;
+            TimeSpan elapsed = Form1.timer.Elapsed;
+            double time = Convert.ToDouble(elapsed.TotalSeconds);
 
             // calculates the score based on time, number of lives, and the level
             if (Form1.win == true)
             {
                 score += 500;
 
-                if (time > 3000)
+                if (time > 30)
                 {
                     score += 250;
                 }
-                else if (time < 3000 && time > 1500)
+                else if (time < 30 && time > 15)
                 {
                     score += 500;
                 }
-                else if (time < 1500)
+                else if (time < 15)
                 {
                     score += 1000;
                 }
@@ -63,6 +64,7 @@ namespace Back_Door_Adventures
             {
                 score += 100;
             }
+
 
             if (Form1.easyLevel == true)
             {
@@ -94,6 +96,8 @@ namespace Back_Door_Adventures
                 }
             }
 
+            
+
 
         }
 
@@ -101,6 +105,7 @@ namespace Back_Door_Adventures
         {
             // takes you back to the playscreen
             Write();
+            Form1.timer.Reset();
             Form1.lives = 3;
             score = 0;
             PlayScreen ps = new PlayScreen();
@@ -117,6 +122,7 @@ namespace Back_Door_Adventures
         {
             //exits the application
             Write();
+            Form1.timer.Reset();
             score = 0;
             Application.Exit();
         }

@@ -218,9 +218,6 @@
     <None Include="Resources\God%27s Menu Background Screen.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Chan Forward.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\Chan Right.png" />
   </ItemGroup>
   <ItemGroup>
@@ -233,6 +230,7 @@
     <Content Include="bin\Debug\EasyLevel.xml" />
     <Content Include="bin\Debug\HighScore.xml" />
     <Content Include="bin\Debug\MediumLevel.xml" />
+    <None Include="Resources\Chan Forward.png" />
     <None Include="Resources\Hyunjin Forward.png" />
     <None Include="Resources\Hyunjin Back.png" />
     <None Include="Resources\Hyunjin Left.png" />

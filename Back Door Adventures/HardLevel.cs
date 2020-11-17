@@ -90,7 +90,8 @@ namespace Back_Door_Adventures
                 lastdirections.Add(direction);
             }
 
-            Form1.startTime = DateTime.Now;//captures the start time
+            //captures the start time
+            Form1.timer.Start();
 
         }
 
@@ -243,7 +244,7 @@ namespace Back_Door_Adventures
             if (chanRec.IntersectsWith(key))
             {
                 //exits the level and goes to the game over screen
-                Form1.stopTime = DateTime.Now;
+                Form1.timer.Stop();
                 Form1.win = true;
                 Form1.hardLevel = true;
                 gameTimerLoop.Enabled = false;

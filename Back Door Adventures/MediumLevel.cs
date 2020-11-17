@@ -79,7 +79,8 @@ namespace Back_Door_Adventures
             }
             reader.Close();
 
-            Form1.startTime = DateTime.Now; //captures the start time
+            //captures the start time
+            Form1.timer.Start();
         }
 
         public void MakeDownSkulls()
@@ -189,7 +190,7 @@ namespace Back_Door_Adventures
                     if (Form1.oneLife == true)
                     {
                         //exits the level and goes to the game over screen
-                        Form1.stopTime = DateTime.Now;
+                        Form1.timer.Stop();
                         Form1.win = false;
                         gameLoopTimer.Enabled = false;
                         healthBox.Visible = false;
@@ -217,7 +218,7 @@ namespace Back_Door_Adventures
                     if (Form1.oneLife == true)
                     {
                         //exits the level and goes to the game over screen
-                        Form1.stopTime = DateTime.Now;
+                        Form1.timer.Stop();
                         Form1.win = false;
                         gameLoopTimer.Enabled = false;
                         healthBox.Visible = false;
@@ -261,7 +262,7 @@ namespace Back_Door_Adventures
             else if (Form1.lives == 0 )
             {
                 //exits the level and goes to the game over screen
-                Form1.stopTime = DateTime.Now;
+                Form1.timer.Stop();
                 Form1.win = false;
                 gameLoopTimer.Enabled = false;
                 healthBox.Visible = false;
@@ -273,7 +274,7 @@ namespace Back_Door_Adventures
             if (hyunjinRec.IntersectsWith(key))
             {
                 //exits the level and goes to the game over screen
-                Form1.stopTime = DateTime.Now;
+                Form1.timer.Stop();
                 Form1.win = true;
                 Form1.mediumLevel = true;
                 gameLoopTimer.Enabled = false;
@@ -303,11 +304,13 @@ namespace Back_Door_Adventures
 
             foreach (Skull s in leftSkulls)
             {
+                //moves all the skulls in the left list
                 s.Move();
             }
 
             foreach (Skull s in downSkulls)
             {
+                //moves all the skulls in the down list
                 s.Move();
             }
 

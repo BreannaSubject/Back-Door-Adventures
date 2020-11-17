@@ -22,8 +22,7 @@ namespace Back_Door_Adventures
         public static int lives = 3;//life counter
 
         //time for scoring
-        public static DateTime startTime; 
-        public static DateTime stopTime;
+        public static Stopwatch timer = new Stopwatch();
 
         // highscores list 
         public static List<Score> highscores = new List<Score>();
