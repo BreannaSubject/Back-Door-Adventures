@@ -24,6 +24,10 @@ namespace Back_Door_Adventures
         private void easyButton_Click(object sender, EventArgs e)
         {
             //takes you to the easy level
+            easyLabel.Visible = false;
+            mediumLabel.Visible = false;
+            hardLabel.Visible = false;
+            exitLabel.Visible = false;
             easyButton.Visible = false;
             mediumButton.Visible = false;
             hardButton.Visible = false;
@@ -35,6 +39,10 @@ namespace Back_Door_Adventures
         private void mediumButton_Click(object sender, EventArgs e)
         {
             //takes you to the medium level
+            easyLabel.Visible = false;
+            mediumLabel.Visible = false;
+            hardLabel.Visible = false;
+            exitLabel.Visible = false;
             easyButton.Visible = false;
             mediumButton.Visible = false;
             hardButton.Visible = false;
@@ -46,6 +54,10 @@ namespace Back_Door_Adventures
         private void hardButton_Click(object sender, EventArgs e)
         {
             //takes you to the hard level
+            easyLabel.Visible = false;
+            mediumLabel.Visible = false;
+            hardLabel.Visible = false;
+            exitLabel.Visible = false;
             easyButton.Visible = false;
             mediumButton.Visible = false;
             hardButton.Visible = false;
@@ -56,8 +68,16 @@ namespace Back_Door_Adventures
 
         private void exitButton_Click(object sender, EventArgs e)
         {
-            //exits the form
-            Application.Exit();
+            easyLabel.Visible = false;
+            mediumLabel.Visible = false;
+            hardLabel.Visible = false;
+            exitLabel.Visible = false;
+            easyButton.Visible = false;
+            mediumButton.Visible = false;
+            hardButton.Visible = false;
+            exitButton.Visible = false;
+            MenuScreen ms = new MenuScreen();
+            this.Controls.Add(ms);
         }
 
         private void easyButton_Enter(object sender, EventArgs e)

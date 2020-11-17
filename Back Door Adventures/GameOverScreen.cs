@@ -99,6 +99,7 @@ namespace Back_Door_Adventures
         private void playAgainButton_Click(object sender, EventArgs e)
         {
             // takes you back to the playscreen
+            Write();
             Form1.lives = 3;
             score = 0;
             PlayScreen ps = new PlayScreen();
@@ -131,6 +132,7 @@ namespace Back_Door_Adventures
             exitButton.BackgroundImage = Properties.Resources.Button_Background_Inverted;
         }
 
+
         public void Write()
         {
             // writes the new score to the XML file
@@ -154,6 +156,6 @@ namespace Back_Door_Adventures
             writer.Close();
         }
 
-        
+       
     }
 }

@@ -32,10 +32,10 @@
             this.mediumButton = new System.Windows.Forms.Button();
             this.hardButton = new System.Windows.Forms.Button();
             this.exitButton = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.easyLabel = new System.Windows.Forms.Label();
+            this.mediumLabel = new System.Windows.Forms.Label();
+            this.hardLabel = new System.Windows.Forms.Label();
+            this.exitLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // easyButton
@@ -94,54 +94,54 @@
             this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
             this.exitButton.Enter += new System.EventHandler(this.exitButton_Enter);
             // 
-            // label1
+            // easyLabel
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Vivaldi", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(76, 68);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(61, 25);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "Easy";
+            this.easyLabel.AutoSize = true;
+            this.easyLabel.Font = new System.Drawing.Font("Vivaldi", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.easyLabel.Location = new System.Drawing.Point(76, 68);
+            this.easyLabel.Name = "easyLabel";
+            this.easyLabel.Size = new System.Drawing.Size(61, 25);
+            this.easyLabel.TabIndex = 4;
+            this.easyLabel.Text = "Easy";
             // 
-            // label2
+            // mediumLabel
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Vivaldi", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(227, 68);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(83, 25);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "Medium";
+            this.mediumLabel.AutoSize = true;
+            this.mediumLabel.Font = new System.Drawing.Font("Vivaldi", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mediumLabel.Location = new System.Drawing.Point(227, 68);
+            this.mediumLabel.Name = "mediumLabel";
+            this.mediumLabel.Size = new System.Drawing.Size(83, 25);
+            this.mediumLabel.TabIndex = 5;
+            this.mediumLabel.Text = "Medium";
             // 
-            // label3
+            // hardLabel
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Vivaldi", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(407, 68);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(67, 25);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "Hard";
+            this.hardLabel.AutoSize = true;
+            this.hardLabel.Font = new System.Drawing.Font("Vivaldi", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.hardLabel.Location = new System.Drawing.Point(407, 68);
+            this.hardLabel.Name = "hardLabel";
+            this.hardLabel.Size = new System.Drawing.Size(67, 25);
+            this.hardLabel.TabIndex = 6;
+            this.hardLabel.Text = "Hard";
             // 
-            // label4
+            // exitLabel
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Vivaldi", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(567, 68);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(57, 25);
-            this.label4.TabIndex = 7;
-            this.label4.Text = "Exit";
+            this.exitLabel.AutoSize = true;
+            this.exitLabel.Font = new System.Drawing.Font("Vivaldi", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.exitLabel.Location = new System.Drawing.Point(567, 68);
+            this.exitLabel.Name = "exitLabel";
+            this.exitLabel.Size = new System.Drawing.Size(57, 25);
+            this.exitLabel.TabIndex = 7;
+            this.exitLabel.Text = "Exit";
             // 
             // PlayScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.exitLabel);
+            this.Controls.Add(this.hardLabel);
+            this.Controls.Add(this.mediumLabel);
+            this.Controls.Add(this.easyLabel);
             this.Controls.Add(this.exitButton);
             this.Controls.Add(this.hardButton);
             this.Controls.Add(this.mediumButton);
@@ -160,9 +160,9 @@
         private System.Windows.Forms.Button mediumButton;
         private System.Windows.Forms.Button hardButton;
         private System.Windows.Forms.Button exitButton;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label easyLabel;
+        private System.Windows.Forms.Label mediumLabel;
+        private System.Windows.Forms.Label hardLabel;
+        private System.Windows.Forms.Label exitLabel;
     }
 }
