@@ -35,8 +35,7 @@ namespace Back_Door_Adventures
             {
                 y += speed;
             }
-            Console.WriteLine(direction);
-            Console.WriteLine(y + "y");
+
         }
     }
 }
