@@ -32,15 +32,16 @@ namespace Back_Door_Adventures
             if (Form1.win == true)
             {
                 score += 500;
-                if (time > 30000)
+
+                if (time > 3000)
                 {
                     score += 250;
                 }
-                else if (time < 30000 && time > 15000)
+                else if (time < 3000 && time > 1500)
                 {
                     score += 500;
                 }
-                else if (time < 15000)
+                else if (time < 1500)
                 {
                     score += 1000;
                 }

@@ -65,6 +65,8 @@ namespace Back_Door_Adventures
             }
             reader.Close();
 
+            Form1.startTime = DateTime.Now;//captures the start time
+
         }
 
         private void EasyLevel_KeyUp(object sender, KeyEventArgs e)
@@ -252,7 +254,7 @@ namespace Back_Door_Adventures
 
         private void gameLoopTimer_Tick(object sender, EventArgs e)
         {
-            Form1.startTime = DateTime.Now;//captures the start time
+            
             tick +=  2;
 
             if (tick == 200)

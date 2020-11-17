@@ -90,6 +90,8 @@ namespace Back_Door_Adventures
                 lastdirections.Add(direction);
             }
 
+            Form1.startTime = DateTime.Now;//captures the start time
+
         }
 
         private void HardLevel_KeyUp(object sender, KeyEventArgs e)
