@@ -28,7 +28,7 @@ namespace Back_Door_Adventures
 
             outputLabel2.Text = ""; // making sure the label is clear
 
-            for (int i = 0; i < 10; i++)
+            for (int i = 0; i < Form1.highscores.Count() && i < 10; i++)
             {
                 outputLabel2.Text += Convert.ToString(i+1) + "  " + Form1.highscores[i].name + "   " + Form1.highscores[i].score + "\n";
                 // printing to the label

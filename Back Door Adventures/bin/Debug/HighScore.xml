@@ -1,1 +1,11 @@
-﻿<?xml version="1.0" encoding="utf-8"?><highscores><highscore><name>Jisung23</name><score>2200</score></highscore><highscore><name>Hyunjin13</name><score>100</score></highscore></highscores>
+﻿<?xml version="1.0" encoding="utf-8"?>
+<highscores>
+	<highscore>
+		<name>Jisung23</name>
+		<score>2200</score>
+	</highscore>
+	<highscore>
+		<name>Chan50</name>
+		<score>2000</score>
+	</highscore>
+</highscores>
